@@ -59,7 +59,7 @@
     </layout>
    </item>
    <item>
-    <widget class="QTableView" name="tvSpisakArtikala"/>
+    <widget class="QTreeView" name="tvSpisakArtikala"/>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">

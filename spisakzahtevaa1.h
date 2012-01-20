@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include <QSqlTableModel>
+#include <QSqlQueryModel>
+
 namespace Ui {
     class spisakZahtevaA1;
 }
@@ -14,11 +16,19 @@ class spisakZahtevaA1 : public QDialog
 public:
     explicit spisakZahtevaA1(QWidget *parent = 0, int userId = 0);
     ~spisakZahtevaA1();
+signals:
+    void dodataStavka();
+private slots:
+    void on_btnDodaj_clicked();
+
+    void on_bntSaveExit_clicked();
 
 private:
     Ui::spisakZahtevaA1 *ui;
-    void setModelArtikli();
-    QSqlTableModel *model;
+    void setModelArtikliCombo();
+    void setModelArtikliTable();
+    QSqlTableModel *modelCombo;
+    QSqlQueryModel *modelTable;
     int _userId;
     int _lastId;
 };
