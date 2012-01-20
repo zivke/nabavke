@@ -11,8 +11,14 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    spisakzahtevaa1.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    spisakzahtevaa1.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    spisakzahtevaa1.ui
+
+
+
