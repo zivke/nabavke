@@ -37,7 +37,7 @@ void OdobravanjeKolicinaA2::setModelStavke(int idZaposlenog)
     modelStavke->setQuery("select nalog.id, status, artikal.ime, trazena_kol, odobrena_kol, id_stavke from stavka \
                           join artikal on stavka.id_artikla=artikal.id_artikla \
                           join spisak on stavka.id_spiska = spisak.id_spiska \
-                          join nalog on spisak.id_naloga = nalog.id where nalog.id = \""+ str+"\"");
+                          join nalog on spisak.id_naloga = nalog.id where status = 'UNETO' and nalog.id = \""+ str+"\"");
 
     modelStavke->setHeaderData(2, Qt::Horizontal, "Naziv");
     modelStavke->setHeaderData(3, Qt::Horizontal, "Trazena kol");

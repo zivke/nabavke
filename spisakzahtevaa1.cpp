@@ -63,10 +63,11 @@ void spisakZahtevaA1::on_btnDodaj_clicked()
     int idArtikla = modelCombo->data(modelCombo->index(ui->cbArtikli->currentIndex(), 0)).toInt();
     int kol = ui->sbKolicina->value();
     QSqlQuery q;
-    q.prepare("insert into stavka (id_spiska, id_artikla, trazena_kol) values (?, ?, ?)");
+    q.prepare("insert into stavka (id_spiska, id_artikla, trazena_kol, status) values (?, ?, ?, ?)");
     q.bindValue(0, _lastId);
     q.bindValue(1, idArtikla);
     q.bindValue(2, kol);
+    q.bindValue(3, "UNETO");
     if(!q.exec())
         QMessageBox::warning(this, "Dodavanje spiska", "Greska prilikom dodavanja spiska");
     //qDebug() << q.lastError();
