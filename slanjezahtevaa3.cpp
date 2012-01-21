@@ -66,10 +66,11 @@ void SlanjeZahtevaA3::on_btnStampa_clicked()
         html += "</tr>";
     }
     html += "</table><br />";
-    html += "<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td width=\"65%\"><img src=\""+logo+"\"></td><td width=\"35%\">";
-    html += ime + "<br />"+adresa+", "+pbr+" "+mesto+"<br />e-mail: "+email+"<br />telefon: "+telefon+"<br />PIB: "+pib+"<br />MB:"+mb+"<br />&#381;iro racun: "+ziro;
-    html +="</td></tr></table><br />";
-    //naslov
+
+//    html += "<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td width=\"50%\">Za:</td><td width=\"35%\">Od:</td>";
+//    html += ime + "<br />"+adresa+", "+pbr+" "+mesto+"<br />e-mail: "+email+"<br />telefon: "+telefon+"<br />PIB: "+pib+"<br />MB:"+mb+"<br />&#381;iro racun: "+ziro;
+//    html +="</td></tr></table><br />";
+//    //naslov
 
 //    html += "<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td width=\"50%\"></td><td width=\"50%\"  align=\"right\" valign=\"top\">";
 //    html += "<br />Osnovica: "+ui->lb_osnovica->text()+"<br />PDV: "+ui->lb_opdv->text()+"<br />Rabat: "+ui->lb_orabat->text()+"<br />Ukupno: "+ui->lb_ukupno->text()+"<br />";

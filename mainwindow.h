@@ -23,6 +23,8 @@ private slots:
 
     void on_btnSlanjeZahteva_clicked();
 
+    void on_btnUnosDiC_clicked();
+
 private:
     Ui::MainWindow *ui;
     int _userId;

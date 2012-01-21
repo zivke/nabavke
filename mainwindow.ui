@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>271</width>
+    <height>339</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,60 +18,52 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>30</y>
-      <width>121</width>
-      <height>101</height>
+      <y>60</y>
+      <width>95</width>
+      <height>56</height>
      </rect>
     </property>
     <property name="title">
      <string>Zaposleni</string>
     </property>
-    <widget class="QPushButton" name="btnZahtevi">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>20</y>
-       <width>101</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Dodaj Zahtev</string>
-     </property>
-    </widget>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="btnZahtevi">
+       <property name="text">
+        <string>Dodaj Zahtev</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>30</y>
-      <width>120</width>
-      <height>101</height>
+      <x>10</x>
+      <y>120</y>
+      <width>97</width>
+      <height>56</height>
      </rect>
     </property>
     <property name="title">
      <string>Rukovodioci</string>
     </property>
-    <widget class="QPushButton" name="btnOdobravanje">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>20</y>
-       <width>81</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Odobri kolicine</string>
-     </property>
-    </widget>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPushButton" name="btnOdobravanje">
+       <property name="text">
+        <string>Odobri kolicine</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
    <widget class="QLabel" name="lbIme">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>141</width>
+      <x>9</x>
+      <y>9</y>
+      <width>46</width>
       <height>16</height>
      </rect>
     </property>
@@ -82,10 +74,10 @@
    <widget class="QLabel" name="lbId">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>10</y>
+      <x>10</x>
+      <y>30</y>
       <width>46</width>
-      <height>13</height>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
@@ -95,28 +87,31 @@
    <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>30</y>
-      <width>120</width>
-      <height>101</height>
+      <x>10</x>
+      <y>180</y>
+      <width>138</width>
+      <height>85</height>
      </rect>
     </property>
     <property name="title">
      <string>Referenti</string>
     </property>
-    <widget class="QPushButton" name="btnSlanjeZahteva">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>20</y>
-       <width>91</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Slanje zahteva</string>
-     </property>
-    </widget>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QPushButton" name="btnSlanjeZahteva">
+       <property name="text">
+        <string>Slanje zahteva</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnUnosDiC">
+       <property name="text">
+        <string>Unos dobavljaca i cena</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -124,7 +119,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>271</width>
      <height>21</height>
     </rect>
    </property>

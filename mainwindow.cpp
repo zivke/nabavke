@@ -4,6 +4,7 @@
 #include "login.h"
 #include "odobravanjekolicinaa2.h"
 #include "slanjezahtevaa3.h"
+#include "biranjedobavljacaa4.h"
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -52,4 +53,10 @@ void MainWindow::on_btnSlanjeZahteva_clicked()
 {
     SlanjeZahtevaA3 *sz = new SlanjeZahtevaA3(this);
     sz->show();
+}
+
+void MainWindow::on_btnUnosDiC_clicked()
+{
+    BiranjeDobavljacaA4 *bd = new BiranjeDobavljacaA4();
+    bd->show();
 }
