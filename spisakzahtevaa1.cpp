@@ -14,7 +14,7 @@ spisakZahtevaA1::spisakZahtevaA1(QWidget *parent, int userId) :
     setModelArtikliCombo();
     //ubacujemo novi red u tabelu
     QSqlQuery q;
-    q.prepare("insert into spisak (id_naloga, datum) values (2, strftime('%d.%m.%Y','now'))");
+    q.prepare("insert into spisak (id_naloga, datum) values ("+QString("%1").arg(_userId)+", strftime('%d.%m.%Y','now'))");
     if(!q.exec())
         QMessageBox::warning(this, "Dodavanje spiska", "Greska prilikom dodavanja spiska");
     _lastId = q.lastInsertId().toInt();
@@ -40,7 +40,7 @@ void spisakZahtevaA1::setModelArtikliCombo()
 void spisakZahtevaA1::setModelArtikliTable()
 {
 
-    QTreeView *view = ui->tvSpisakArtikala;
+    QTreeView *view = ui->tvStavke;
     modelTable = new QSqlQueryModel(this);
     //konverzija int-a u string
     QString str;
