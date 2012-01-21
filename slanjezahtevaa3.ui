@@ -27,20 +27,7 @@
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QComboBox" name="comboBox"/>
+      <widget class="QComboBox" name="cbDobavljaci"/>
      </item>
     </layout>
    </item>
@@ -112,7 +99,7 @@
   <zorder>btnStampa</zorder>
   <zorder>btnIzadji</zorder>
   <zorder>label</zorder>
-  <zorder>comboBox</zorder>
+  <zorder>cbDobavljaci</zorder>
   <zorder>label_2</zorder>
   <zorder>label_2</zorder>
   <zorder>horizontalSpacer_3</zorder>

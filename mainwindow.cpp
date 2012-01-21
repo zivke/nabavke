@@ -3,6 +3,7 @@
 #include "spisakzahtevaa1.h"
 #include "login.h"
 #include "odobravanjekolicinaa2.h"
+#include "slanjezahtevaa3.h"
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -45,4 +46,10 @@ void MainWindow::on_btnOdobravanje_clicked()
 {
     OdobravanjeKolicinaA2 *ok = new OdobravanjeKolicinaA2(this);
     ok->show();
+}
+
+void MainWindow::on_btnSlanjeZahteva_clicked()
+{
+    SlanjeZahtevaA3 *sz = new SlanjeZahtevaA3(this);
+    sz->show();
 }

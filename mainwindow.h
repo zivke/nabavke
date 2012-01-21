@@ -21,6 +21,8 @@ private slots:
 
     void on_btnOdobravanje_clicked();
 
+    void on_btnSlanjeZahteva_clicked();
+
 private:
     Ui::MainWindow *ui;
     int _userId;
