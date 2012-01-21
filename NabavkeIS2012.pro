@@ -14,18 +14,24 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     spisakzahtevaa1.cpp \
     login.cpp \
-    odobravanjekolicinaa2.cpp
+    odobravanjekolicinaa2.cpp \
+    slanjezahtevaa3.cpp
 
 HEADERS  += mainwindow.h \
     spisakzahtevaa1.h \
     login.h \
     odobravanjekolicinaa2.h \
-    connection.h
+    connection.h \
+    slanjezahtevaa3.h
 
 FORMS    += mainwindow.ui \
     spisakzahtevaa1.ui \
     login.ui \
-    odobravanjekolicinaa2.ui
+    odobravanjekolicinaa2.ui \
+    slanjezahtevaa3.ui
+
+
+
 
 
 
