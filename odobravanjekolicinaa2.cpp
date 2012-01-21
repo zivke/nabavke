@@ -95,3 +95,8 @@ void OdobravanjeKolicinaA2::on_btnOdobri_clicked()
     else
         setModelStavke(modelZaposleni->data(modelZaposleni->index(_odabraniUser, 0)).toInt());
 }
+
+void OdobravanjeKolicinaA2::on_btnSaveExit_clicked()
+{
+    this->close();
+}

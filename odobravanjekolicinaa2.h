@@ -27,6 +27,8 @@ private slots:
 
     void on_btnOdobri_clicked();
 
+    void on_btnSaveExit_clicked();
+
 private:
     Ui::OdobravanjeKolicinaA2 *ui;
     void setModelZaposleni();
