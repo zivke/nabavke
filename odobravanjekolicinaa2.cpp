@@ -24,7 +24,8 @@ void OdobravanjeKolicinaA2::setModelZaposleni()
 {
     QComboBox *view = ui->cbZaposleni;
     modelZaposleni = new QSqlQueryModel();
-    modelZaposleni->setQuery("select id, ime ||' '|| prezime from nalog");
+    modelZaposleni->setQuery("SELECT -1 AS A, 'Izaberite zaposlenog...' AS B UNION select id, ime ||' '|| prezime from nalog");
+    modelZaposleni->setHeaderData(1, Qt::Horizontal, "Zaposleni");
     view->setModel(modelZaposleni);
     view->setModelColumn(1);
 }
