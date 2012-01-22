@@ -93,6 +93,5 @@ void spisakZahtevaA1::on_btnOdustani_clicked()
     if(!q.exec())
         QMessageBox::warning(this, "Brisanje spiska", "Greska prilikom brisanja spiska");
     //zatvarmo formu
-    qDebug() << q.lastQuery();
     this->close();
 }
