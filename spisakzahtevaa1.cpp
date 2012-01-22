@@ -79,3 +79,20 @@ void spisakZahtevaA1::on_bntSaveExit_clicked()
 {
     this->close();
 }
+
+void spisakZahtevaA1::on_btnOdustani_clicked()
+{
+    //on delete cascadde ne radi O.o
+    //brisemo spisak
+    QSqlQuery q;
+    q.prepare("delete from spisak where id_spiska =\""+QString("%1").arg(_lastId)+"\"");
+    if(!q.exec())
+        QMessageBox::warning(this, "Brisanje spiska", "Greska prilikom brisanja spiska");
+    //brisemo stavke koje su na spisku
+    q.prepare("delete from stavka where id_spiska = \""+QString("%1").arg(_lastId)+"\"");
+    if(!q.exec())
+        QMessageBox::warning(this, "Brisanje spiska", "Greska prilikom brisanja spiska");
+    //zatvarmo formu
+    qDebug() << q.lastQuery();
+    this->close();
+}

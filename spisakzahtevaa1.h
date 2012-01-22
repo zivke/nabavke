@@ -23,6 +23,8 @@ private slots:
 
     void on_bntSaveExit_clicked();
 
+    void on_btnOdustani_clicked();
+
 private:
     Ui::spisakZahtevaA1 *ui;
     void setModelArtikliCombo();

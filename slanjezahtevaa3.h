@@ -22,6 +22,8 @@ private slots:
     void printHtml(const QString &html);
     void on_btnStampa_clicked();
 
+    void on_btnEmail_clicked();
+
 private:
     Ui::SlanjeZahtevaA3 *ui;
     QSqlQueryModel *modelDobavljaci;

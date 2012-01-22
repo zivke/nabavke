@@ -3,6 +3,8 @@
 #include "QPrintDialog"
 #include "QPrinter"
 #include "QTextDocument"
+#include <QDesktopServices>
+#include <QUrl>
 
 SlanjeZahtevaA3::SlanjeZahtevaA3(QWidget *parent) :
     QDialog(parent),
@@ -94,4 +96,9 @@ void SlanjeZahtevaA3::printHtml(const QString &html)
         textDocument.setHtml(html);
         textDocument.print(&printer);
     }
+}
+
+void SlanjeZahtevaA3::on_btnEmail_clicked()
+{
+    QDesktopServices::openUrl(QUrl("mailto:ilfil9@gmail.com?subject=Test&body=Just a test"));
 }
