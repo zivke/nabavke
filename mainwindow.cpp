@@ -5,6 +5,7 @@
 #include "odobravanjekolicinaa2.h"
 #include "slanjezahtevaa3.h"
 #include "biranjedobavljacaa4.h"
+#include "pretrazivanjesredstavad1.h"
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -59,4 +60,10 @@ void MainWindow::on_btnUnosDiC_clicked()
 {
     BiranjeDobavljacaA4 *bd = new BiranjeDobavljacaA4();
     bd->show();
+}
+
+void MainWindow::on_btnPretrazivanje_clicked()
+{
+    PretrazivanjeSredstavaD1 *ps = new PretrazivanjeSredstavaD1();
+    ps->show();
 }

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PretrazivanjeSredstavaD1</class>
+ <widget class="QDialog" name="PretrazivanjeSredstavaD1">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1001</width>
+    <height>401</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Pretraživanje sredstava</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>981</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="3,7">
+      <property name="spacing">
+       <number>15</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item>
+       <layout class="QFormLayout" name="formLayout_3">
+        <property name="horizontalSpacing">
+         <number>20</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>20</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Nazv sredstva:</string>
+          </property>
+          <property name="buddy">
+           <cstring>cbSredstva</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="cbSredstva"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Mesec:</string>
+          </property>
+          <property name="buddy">
+           <cstring>cbMesec</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Godina:</string>
+          </property>
+          <property name="buddy">
+           <cstring>cbGodina</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Zaposleni:</string>
+          </property>
+          <property name="buddy">
+           <cstring>leZaposleni</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Organizaciona jedinica:</string>
+          </property>
+          <property name="buddy">
+           <cstring>cbOrgJedinica</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Dobavljač:</string>
+          </property>
+          <property name="buddy">
+           <cstring>cbDobavljac</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>Stanje sredstva:</string>
+          </property>
+          <property name="buddy">
+           <cstring>cbStanjeSredstva</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="cbGodina"/>
+        </item>
+        <item row="4" column="1">
+         <widget class="QComboBox" name="cbOrgJedinica"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QComboBox" name="cbDobavljac"/>
+        </item>
+        <item row="6" column="1">
+         <widget class="QComboBox" name="cbStanjeSredstva"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="leZaposleni"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="cbMesec"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTreeView" name="tvPretraga">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="btnPretrazi">
+        <property name="text">
+         <string>Pretraži</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnObrisiSve">
+        <property name="text">
+         <string>Obriši sve</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnIzadji">
+        <property name="text">
+         <string>Izađi</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>cbSredstva</tabstop>
+  <tabstop>cbMesec</tabstop>
+  <tabstop>cbGodina</tabstop>
+  <tabstop>leZaposleni</tabstop>
+  <tabstop>cbOrgJedinica</tabstop>
+  <tabstop>cbDobavljac</tabstop>
+  <tabstop>cbStanjeSredstva</tabstop>
+  <tabstop>tvPretraga</tabstop>
+  <tabstop>btnPretrazi</tabstop>
+  <tabstop>btnObrisiSve</tabstop>
+  <tabstop>btnIzadji</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

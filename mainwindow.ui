@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>271</width>
-    <height>339</height>
+    <height>362</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -112,6 +112,19 @@
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QPushButton" name="btnPretrazivanje">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>280</y>
+      <width>131</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pretraživanje sredstava</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">

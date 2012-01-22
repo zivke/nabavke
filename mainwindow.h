@@ -25,6 +25,8 @@ private slots:
 
     void on_btnUnosDiC_clicked();
 
+    void on_btnPretrazivanje_clicked();
+
 private:
     Ui::MainWindow *ui;
     int _userId;
