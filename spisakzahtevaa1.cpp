@@ -18,7 +18,6 @@ spisakZahtevaA1::spisakZahtevaA1(QWidget *parent, int userId) :
     if(!q.exec())
         QMessageBox::warning(this, "Dodavanje spiska", "Greska prilikom dodavanja spiska");
     _lastId = q.lastInsertId().toInt();
-    //qDebug() << q.lastInsertId().toInt();
     setModelArtikliTable();
 
 }
@@ -62,17 +61,20 @@ void spisakZahtevaA1::on_btnDodaj_clicked()
 {
     int idArtikla = modelCombo->data(modelCombo->index(ui->cbArtikli->currentIndex(), 0)).toInt();
     int kol = ui->sbKolicina->value();
-    QSqlQuery q;
-    q.prepare("insert into stavka (id_spiska, id_artikla, trazena_kol, status) values (?, ?, ?, ?)");
-    q.bindValue(0, _lastId);
-    q.bindValue(1, idArtikla);
-    q.bindValue(2, kol);
-    q.bindValue(3, "UNETO");
-    if(!q.exec())
-        QMessageBox::warning(this, "Dodavanje spiska", "Greska prilikom dodavanja spiska");
-    //qDebug() << q.lastError();
-    //qDebug() << q.lastQuery();
-    setModelArtikliTable();
+    if (kol){
+        QSqlQuery q;
+        q.prepare("insert into stavka (id_spiska, id_artikla, trazena_kol, status) values (?, ?, ?, ?)");
+        q.bindValue(0, _lastId);
+        q.bindValue(1, idArtikla);
+        q.bindValue(2, kol);
+        q.bindValue(3, "UNETO");
+        if(!q.exec())
+            QMessageBox::warning(this, "Dodavanje spiska", "Greska prilikom dodavanja spiska");
+
+        setModelArtikliTable();
+    }
+    else
+        QMessageBox::warning(this, "Kolicina 0", "Ne možete dodati stavku sa kolicinom 0.");
 }
 
 void spisakZahtevaA1::on_bntSaveExit_clicked()
@@ -94,4 +96,17 @@ void spisakZahtevaA1::on_btnOdustani_clicked()
         QMessageBox::warning(this, "Brisanje spiska", "Greska prilikom brisanja spiska");
     //zatvarmo formu
     this->close();
+}
+
+void spisakZahtevaA1::on_btnUkloni_clicked()
+{
+    QString idStavke=modelTable->data(modelTable->index(ui->tvStavke->selectionModel()->currentIndex().row(),0)).toString();
+    if(!idStavke.isEmpty())
+    {
+       QSqlQuery query;
+       query.prepare("delete from stavka where id_stavke=" + idStavke);
+       if(!query.exec())
+          QMessageBox::warning(this, "Uklanjanje stavke", "Greska prilikom uklanjnja stavke.");
+       setModelArtikliTable();
+    }
 }

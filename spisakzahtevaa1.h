@@ -25,6 +25,8 @@ private slots:
 
     void on_btnOdustani_clicked();
 
+    void on_btnUkloni_clicked();
+
 private:
     Ui::spisakZahtevaA1 *ui;
     void setModelArtikliCombo();

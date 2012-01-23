@@ -56,6 +56,13 @@
        </property>
       </spacer>
      </item>
+     <item>
+      <widget class="QPushButton" name="btnUkloni">
+       <property name="text">
+        <string>Ukloni obeleženu stavku</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item>

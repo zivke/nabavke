@@ -5,7 +5,7 @@
 #include <QSqlQueryModel>
 #include <QItemSelection>
 #include <QItemSelectionModel>
-
+#include <QList>
 namespace Ui {
     class OdobravanjeKolicinaA2;
 }
@@ -37,7 +37,9 @@ private:
     QSqlQueryModel *modelStavke;
     QItemSelectionModel *selectionModel;
     int _odabraniUser;
-    int _odabraniUserId;
+    int _odabranaStavkaId;
+    QList<int> zaOdobravanje;
+
 };
 
 #endif // ODOBRAVANJEKOLICINAA2_H

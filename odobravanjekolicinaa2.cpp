@@ -67,7 +67,7 @@ void OdobravanjeKolicinaA2::updateSelection(const QItemSelection &selected,
     ui->lbNaziv->setText(modelStavke->data(modelStavke->index(index.row(), 2)).toString());
     ui->lbKolicina->setText(modelStavke->data(modelStavke->index(index.row(), 3)).toString());
     ui->inputOdobrena->setValue(modelStavke->data(modelStavke->index(index.row(), 4)).toInt());
-    _odabraniUserId = modelStavke->data(modelStavke->index(index.row(), 5)).toInt();
+    _odabranaStavkaId = modelStavke->data(modelStavke->index(index.row(), 5)).toInt();
 }
 
 
@@ -88,16 +88,36 @@ void OdobravanjeKolicinaA2::on_btnOdobri_clicked()
 {
     QSqlQuery query;
     int kolicina = ui->inputOdobrena->value();
-    query.prepare(QString("UPDATE stavka SET odobrena_kol=%1, status='%2' WHERE id_stavke='%3'").arg(kolicina).arg("ODOBRENO").arg(_odabraniUserId));
+    query.prepare(QString("UPDATE stavka SET odobrena_kol=%1 WHERE id_stavke='%2'").arg(kolicina).arg(_odabranaStavkaId));
     if(!query.exec()){
         qDebug() << query.lastQuery();
         QMessageBox::warning(this, "Odobravanje stavke", "Greska prilikom odobravanja stavke.");
     }
-    else
+    else{
         setModelStavke(modelZaposleni->data(modelZaposleni->index(_odabraniUser, 0)).toInt());
+        zaOdobravanje.append(_odabranaStavkaId);
+    }
 }
 
 void OdobravanjeKolicinaA2::on_btnSaveExit_clicked()
 {
-    this->close();
+    QString qs;
+    for (int i=0; i<zaOdobravanje.size(); i++)
+    {
+        if(i!=zaOdobravanje.size()-1){
+            qs+= QString("%1, ").arg(zaOdobravanje.at(i));
+        }
+        else{
+            qs+= QString("%1").arg(zaOdobravanje.at(i));
+        }
+    }
+    QSqlQuery query;
+    query.prepare(QString("UPDATE stavka SET status=%1 WHERE id_stavke in (%2)").arg("'ODOBRENO'").arg(qs));
+    if(!query.exec()){
+        qDebug() << query.lastQuery();
+        QMessageBox::warning(this, "Odobravanje stavki", "Greska prilikom odobravanja stavki.");
+    }
+    else{
+        this->close();
+    }
 }
