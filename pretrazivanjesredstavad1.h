@@ -19,16 +19,20 @@ public:
 
 private slots:
 	void on_btnPretrazi_clicked();
-	void on_btnObrisiSve_clicked();
 	void on_btnIzadji_clicked();
 	void setModelSredstva();
 	void setModelGodina();
 	void setModelOrgJedinica();
-	void setModelStanjeSredstva();
+	void setModelDobavljac();
+	void setModelStatusSredstva();
 
 private:
     Ui::PretrazivanjeSredstavaD1 *ui;
     QSqlQueryModel *modelSredstva;
+    QSqlQueryModel *modelGodina;
+    QSqlQueryModel *modelOrgJedinica;
+    QSqlQueryModel *modelDobavljac;
+    QSqlQueryModel *modelStatusSredstva;
     int _userId;
 };
 
