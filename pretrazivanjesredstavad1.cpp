@@ -108,7 +108,7 @@ void PretrazivanjeSredstavaD1::setModelZaposleni()
 	}
 	else
 	{
-		modelZaposleni->setQuery("select -1, 'Svi' union select id, ime || ' ' || prezime from nalog;");
+		modelZaposleni->setQuery("select -1, 'Svi' union select id, ime || ' ' || prezime from nalog where tip = 'zaposleni';");
 		view->setModel(modelZaposleni);
 		view->setModelColumn(1);
 	}
