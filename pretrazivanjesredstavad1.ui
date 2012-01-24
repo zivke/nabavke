@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1001</width>
+    <width>1300</width>
     <height>401</height>
    </rect>
   </property>
@@ -69,7 +69,7 @@
           <string>Zaposleni:</string>
          </property>
          <property name="buddy">
-          <cstring>leZaposleni</cstring>
+          <cstring>cbZaposleni</cstring>
          </property>
         </widget>
        </item>
@@ -115,11 +115,77 @@
        <item row="6" column="1">
         <widget class="QComboBox" name="cbStatusSredstva"/>
        </item>
-       <item row="3" column="1">
-        <widget class="QLineEdit" name="leZaposleni"/>
-       </item>
        <item row="1" column="1">
-        <widget class="QComboBox" name="cbMesec"/>
+        <widget class="QComboBox" name="cbMesec">
+         <item>
+          <property name="text">
+           <string>Svi</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Januar</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Februar</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mart</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>April</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Maj</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Jun</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Jul</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Avgust</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Septembar</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Oktobar</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Novembar</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Decembar</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="cbZaposleni"/>
        </item>
       </layout>
      </item>
@@ -179,7 +245,7 @@
   <tabstop>cbSredstva</tabstop>
   <tabstop>cbMesec</tabstop>
   <tabstop>cbGodina</tabstop>
-  <tabstop>leZaposleni</tabstop>
+  <tabstop>cbZaposleni</tabstop>
   <tabstop>cbOrgJedinica</tabstop>
   <tabstop>cbDobavljac</tabstop>
   <tabstop>cbStatusSredstva</tabstop>

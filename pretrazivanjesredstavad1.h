@@ -25,6 +25,7 @@ private slots:
 	void setModelOrgJedinica();
 	void setModelDobavljac();
 	void setModelStatusSredstva();
+	void setModelZaposleni();
 
 private:
     Ui::PretrazivanjeSredstavaD1 *ui;
@@ -33,6 +34,8 @@ private:
     QSqlQueryModel *modelOrgJedinica;
     QSqlQueryModel *modelDobavljac;
     QSqlQueryModel *modelStatusSredstva;
+    QSqlQueryModel *modelTablePretraga;
+    QSqlQueryModel *modelZaposleni;
     int _userId;
 };
 
