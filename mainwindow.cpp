@@ -64,6 +64,6 @@ void MainWindow::on_btnUnosDiC_clicked()
 
 void MainWindow::on_btnPretrazivanje_clicked()
 {
-    PretrazivanjeSredstavaD1 *ps = new PretrazivanjeSredstavaD1();
+    PretrazivanjeSredstavaD1 *ps = new PretrazivanjeSredstavaD1(this, _userId);
     ps->show();
 }

@@ -37,6 +37,7 @@ private:
     QSqlQueryModel *modelTablePretraga;
     QSqlQueryModel *modelZaposleni;
     int _userId;
+    QString tipNaloga;
 };
 
 #endif // PRETRAZIVANJESREDSTAVAD1_H

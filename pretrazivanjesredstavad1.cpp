@@ -9,6 +9,15 @@ PretrazivanjeSredstavaD1::PretrazivanjeSredstavaD1(QWidget *parent, int userId)
 {
 	ui->setupUi(this);
 	_userId = userId;
+
+	QSqlQuery query;
+	query.prepare( "SELECT tip FROM nalog WHERE id = ?");
+	query.bindValue(0, _userId);
+	query.exec();
+
+	if(query.next())
+		tipNaloga = query.value(0).toString();
+
 	setModelSredstva();
 	setModelGodina();
 	setModelOrgJedinica();
@@ -43,16 +52,28 @@ void PretrazivanjeSredstavaD1::setModelGodina()
 	modelGodina->setQuery("select 'Sve' union select distinct(substr(datum, -4)) as godina from spisak order by godina;");
 	view->setModel(modelGodina);
 	view->setModelColumn(0);
-	view->setCurrentIndex(view->count()-1);
+	view->setCurrentIndex(view->findText("Sve"));
 }
 
 void PretrazivanjeSredstavaD1::setModelOrgJedinica()
 {
 	QComboBox *view = ui->cbOrgJedinica;
 	modelOrgJedinica = new QSqlQueryModel();
-	modelOrgJedinica->setQuery("select -1, 'Sve', -1, -1 union select * from ogranak;");
-	view->setModel(modelOrgJedinica);
-	view->setModelColumn(1);
+	if(!tipNaloga.compare("rukovodilac"))
+	{
+		modelOrgJedinica->setQuery("select o.id_ogranka, o.naziv \
+									from ogranak o join nalog n on o.id_ogranka = n.id_ogranka \
+									where n.id = " + QString("%1").arg(_userId) + ";");
+		view->setModel(modelOrgJedinica);
+		view->setModelColumn(1);
+		view->setDisabled(true);
+	}
+	else
+	{
+		modelOrgJedinica->setQuery("select -1, 'Sve', -1, -1 union select * from ogranak;");
+		view->setModel(modelOrgJedinica);
+		view->setModelColumn(1);
+	}
 }
 
 void PretrazivanjeSredstavaD1::setModelDobavljac()
@@ -71,15 +92,26 @@ void PretrazivanjeSredstavaD1::setModelStatusSredstva()
 	modelStatusSredstva->setQuery("select 'Svi' union select distinct(status) from stavka;");
 	view->setModel(modelStatusSredstva);
 	view->setModelColumn(0);
+	view->setCurrentIndex(view->findText("Svi"));
 }
 
 void PretrazivanjeSredstavaD1::setModelZaposleni()
 {
 	QComboBox *view = ui->cbZaposleni;
 	modelZaposleni = new QSqlQueryModel();
-	modelZaposleni->setQuery("select -1, 'Svi' union select id, ime || ' ' || prezime from nalog;");
-	view->setModel(modelZaposleni);
-	view->setModelColumn(1);
+	if(!tipNaloga.compare("zaposleni"))
+	{
+		modelZaposleni->setQuery("select id, ime || ' ' || prezime from nalog where id = " + QString("%1").arg(_userId) + ";");
+		view->setModel(modelZaposleni);
+		view->setModelColumn(1);
+		view->setDisabled(true);
+	}
+	else
+	{
+		modelZaposleni->setQuery("select -1, 'Svi' union select id, ime || ' ' || prezime from nalog;");
+		view->setModel(modelZaposleni);
+		view->setModelColumn(1);
+	}
 }
 
 void PretrazivanjeSredstavaD1::on_btnPretrazi_clicked()
@@ -107,10 +139,18 @@ void PretrazivanjeSredstavaD1::on_btnPretrazi_clicked()
 	if(ui->cbGodina->currentText().compare("Sve"))
 			query +=" and substr(sp.datum,-4) = '" + ui->cbGodina->currentText() + "'";
 
-	if(ui->cbZaposleni->currentIndex())
+	if(!tipNaloga.compare("zaposleni"))
+	{
+		query +=" and n.id = " + QString("%1").arg(_userId);
+	}
+	else if(ui->cbZaposleni->currentIndex())
 			query +=" and n.id = " + modelZaposleni->data(modelZaposleni->index(ui->cbZaposleni->currentIndex(),0)).toString();
 
-	if(ui->cbOrgJedinica->currentIndex())
+	if(!tipNaloga.compare("rukovodilac"))
+	{
+		query +=" and o.id_ogranka = " + modelOrgJedinica->data(modelOrgJedinica->index(ui->cbOrgJedinica->currentIndex(),0)).toString();
+	}
+	else if(ui->cbOrgJedinica->currentIndex())
 				query +=" and o.id_ogranka = " + modelOrgJedinica->data(modelOrgJedinica->index(ui->cbOrgJedinica->currentIndex(),0)).toString();
 
 	if(ui->cbDobavljac->currentIndex())
@@ -132,4 +172,6 @@ void PretrazivanjeSredstavaD1::on_btnPretrazi_clicked()
 	view->setModel(modelTablePretraga);
 	view->setSortingEnabled(true);
 	view->setColumnHidden(0, true);
+	if(modelTablePretraga->rowCount()==0)
+			QMessageBox::warning(this, "Pretraga", "Ne postoje stavke za trazene vrednosti. Pokusajte ponovo.");
 }
