@@ -18,12 +18,11 @@ SOURCES += main.cpp\
     slanjezahtevaa3.cpp \
     biranjedobavljacaa4.cpp \
     pretrazivanjesredstavad1.cpp \
-<<<<<<< .mine    raspodeli.cpp \
-    dodavanjedobavljaca.cpp
-=======    raspodeli.cpp \
+    raspodeli.cpp \
     izvestavanjeosredstvimad2.cpp \
-    transport.cpp
->>>>>>> .theirs
+    transport.cpp \
+    dodavanjedobavljaca.cpp
+
 HEADERS  += mainwindow.h \
     spisakzahtevaa1.h \
     login.h \
@@ -32,12 +31,11 @@ HEADERS  += mainwindow.h \
     slanjezahtevaa3.h \
     biranjedobavljacaa4.h \
     pretrazivanjesredstavad1.h \
-<<<<<<< .mine    raspodeli.h \
-    dodavanjedobavljaca.h
-=======    raspodeli.h \
+    raspodeli.h \
     izvestavanjeosredstvimad2.h \
-    transport.h
->>>>>>> .theirs
+    transport.h \
+    dodavanjedobavljaca.h
+
 FORMS    += mainwindow.ui \
     spisakzahtevaa1.ui \
     login.ui \
@@ -45,12 +43,10 @@ FORMS    += mainwindow.ui \
     slanjezahtevaa3.ui \
     biranjedobavljacaa4.ui \
     pretrazivanjesredstavad1.ui \
-<<<<<<< .mine    raspodeli.ui \
+    raspodeli.ui \
+    izvestavanjeosredstvimad2.ui \
+    transport.ui \
     dodavanjedobavljaca.ui
 
 
 
-=======    raspodeli.ui \
-    izvestavanjeosredstvimad2.ui \
-    transport.ui
->>>>>>> .theirs
