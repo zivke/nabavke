@@ -7,6 +7,7 @@
 #include <QPrinter>
 #include <QPrintDialog>
 #include <QTextDocument>
+#include <QFileDialog>
 #include "ui_izvestavanjeosredstvimad2.h"
 
 namespace Ui {
@@ -26,7 +27,8 @@ private slots:
 	void on_btnPrikazi_clicked();
 	void on_btnIzadji_clicked();
 	void on_btnOdstampaj_clicked();
-	void printHtml(const QString &html);
+	void on_btnSacuvaj_clicked();
+	QString napraviIzvestaj();
 
 
 private:
