@@ -31,6 +31,8 @@ private slots:
 
     void on_btnIzvestaj_clicked();
 
+    void on_btnTransport_clicked();
+
 private:
     Ui::MainWindow *ui;
     int _userId;

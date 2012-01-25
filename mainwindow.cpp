@@ -8,6 +8,7 @@
 #include "pretrazivanjesredstavad1.h"
 #include "raspodeli.h"
 #include "izvestavanjeosredstvimad2.h"
+#include "transport.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -81,4 +82,13 @@ void MainWindow::on_btnIzvestaj_clicked()
 {
 	IzvestavanjeOSredstvimaD2 *is = new IzvestavanjeOSredstvimaD2(this);
 	is->show();
+}
+
+
+
+
+void MainWindow::on_btnTransport_clicked()
+{
+    Transport *tr = new Transport(this);
+    tr->show();
 }
