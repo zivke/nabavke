@@ -18,7 +18,8 @@ SOURCES += main.cpp\
     slanjezahtevaa3.cpp \
     biranjedobavljacaa4.cpp \
     pretrazivanjesredstavad1.cpp \
-    raspodeli.cpp
+    raspodeli.cpp \
+    izvestavanjeosredstvimad2.cpp
 
 HEADERS  += mainwindow.h \
     spisakzahtevaa1.h \
@@ -28,7 +29,8 @@ HEADERS  += mainwindow.h \
     slanjezahtevaa3.h \
     biranjedobavljacaa4.h \
     pretrazivanjesredstavad1.h \
-    raspodeli.h
+    raspodeli.h \
+    izvestavanjeosredstvimad2.h
 
 FORMS    += mainwindow.ui \
     spisakzahtevaa1.ui \
@@ -37,4 +39,5 @@ FORMS    += mainwindow.ui \
     slanjezahtevaa3.ui \
     biranjedobavljacaa4.ui \
     pretrazivanjesredstavad1.ui \
-    raspodeli.ui
+    raspodeli.ui \
+    izvestavanjeosredstvimad2.ui
