@@ -46,6 +46,36 @@ void MainWindow::inicijalizacija(QString ime, int id)
     str.append(QString("%1").arg(_userId));
 
     ui->lbId->setText(str);
+
+/******** Onemogucavanje dugmica po tipu naloga korisnika ********
+
+    QSqlQuery query;
+	query.prepare( "SELECT tip FROM nalog WHERE id = ?");
+	query.bindValue(0, _userId);
+	query.exec();
+
+	if(query.next())
+		_tipNaloga = query.value(0).toString();
+
+	if(!_tipNaloga.compare("zaposleni"))
+    {
+    	ui->btnIzvestaj->setEnabled(false);
+    	ui->btnOdobravanje->setEnabled(false);
+    	ui->btnRaspodeli->setEnabled(false);
+    	ui->btnTransport->setEnabled(false);
+    	ui->btnUnosDiC->setEnabled(false);
+    	ui->btnSlanjeZahteva->setEnabled(false);
+    }
+	else if(!_tipNaloga.compare("rukovodilac"))
+	{
+		ui->btnZahtevi->setEnabled(false);
+		ui->btnIzvestaj->setEnabled(false);
+		ui->btnRaspodeli->setEnabled(false);
+		ui->btnTransport->setEnabled(false);
+		ui->btnUnosDiC->setEnabled(false);
+		ui->btnSlanjeZahteva->setEnabled(false);
+	}
+*****************************************************************/
 }
 
 void MainWindow::on_btnOdobravanje_clicked()
@@ -83,9 +113,6 @@ void MainWindow::on_btnIzvestaj_clicked()
 	IzvestavanjeOSredstvimaD2 *is = new IzvestavanjeOSredstvimaD2(this);
 	is->show();
 }
-
-
-
 
 void MainWindow::on_btnTransport_clicked()
 {

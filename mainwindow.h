@@ -36,6 +36,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     int _userId;
+    QString _tipNaloga;
 };
 
 #endif // MAINWINDOW_H

@@ -68,7 +68,7 @@
        <item>
         <widget class="QPushButton" name="btnTransport">
          <property name="text">
-          <string>Trasnsport</string>
+          <string>Transport</string>
          </property>
         </widget>
        </item>
@@ -84,7 +84,7 @@
        <item>
         <widget class="QPushButton" name="btnOdobravanje">
          <property name="text">
-          <string>Odobri kolicine</string>
+          <string>Odobri količine</string>
          </property>
         </widget>
        </item>
@@ -135,7 +135,7 @@ sredstava</string>
        <item>
         <widget class="QPushButton" name="btnUnosDiC">
          <property name="text">
-          <string>Unos dobavljaca i cena</string>
+          <string>Unos dobavljača i cena</string>
          </property>
         </widget>
        </item>
