@@ -50,7 +50,6 @@ void IzvestavanjeOSredstvimaD2::on_btnPrikazi_clicked()
 	if(ui->cbGodina->currentText().compare("Sve"))
 			query +=" and substr(sp.datum,-4) = '" + ui->cbGodina->currentText() + "'";
 
-
 	modelTableIzvestaj->setQuery(query);
 	modelTableIzvestaj->setHeaderData(1, Qt::Horizontal, "Naziv sredstva");
 	modelTableIzvestaj->setHeaderData(2, Qt::Horizontal, "Mesec");
@@ -66,4 +65,44 @@ void IzvestavanjeOSredstvimaD2::on_btnPrikazi_clicked()
 	view->setColumnHidden(0, true);
 	if(modelTableIzvestaj->rowCount()==0)
 			QMessageBox::warning(this, "Pretraga", "Ne postoje stavke za trazene vrednosti. Pokusajte ponovo.");
+}
+
+void IzvestavanjeOSredstvimaD2::on_btnOdstampaj_clicked()
+{
+    QString html;
+    html += "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><style>table{border-style:solid; border-width:1px; border-color:#ccc;}</style></head><body>";
+    html += "<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"5\"><tr><td align=\"center\" bgcolor=\"lightgrey\" bordercolor=\"#666666\"><font size=\"5\" face=\"arial\">IZVESTAJ</font></td></tr></table>";
+
+    //dodavanje stavki
+    html +="<br /><br /><br /><table width=\"100%\" cellspacing=\"0\" cellpadding=\"3\">";
+    html +="<tr><th>RBR</th><th>Artikal</th><th>Mesec</th><th>Godina</th><th>Zaposleni</th><th>Org. Jedinica</th><th>Dobavljac</th><th>Stanje</th><th>Trazena kol.</th><th>Odobrena kol.</th></tr>";
+    int brR = modelTableIzvestaj->rowCount();
+    for (int i =0; i<brR; i++)
+    {
+        html +="<tr><td>" + QString::number(i+1)+".</td>";
+        html += "<td>" + modelTableIzvestaj->data(ui->tvIzvestaj->model()->index(i, 1)).toString()+"</td>";
+        html += "<td>" + modelTableIzvestaj->data(ui->tvIzvestaj->model()->index(i, 2)).toString()+"</td>";
+        html += "<td>" + modelTableIzvestaj->data(ui->tvIzvestaj->model()->index(i, 3)).toString()+"</td>";
+        html += "<td>" + modelTableIzvestaj->data(ui->tvIzvestaj->model()->index(i, 4)).toString()+"</td>";
+        html += "<td>" + modelTableIzvestaj->data(ui->tvIzvestaj->model()->index(i, 5)).toString()+"</td>";
+        html += "<td>" + modelTableIzvestaj->data(ui->tvIzvestaj->model()->index(i, 6)).toString()+"</td>";
+        html += "<td>" + modelTableIzvestaj->data(ui->tvIzvestaj->model()->index(i, 7)).toString()+"</td>";
+        html += "<td>" + modelTableIzvestaj->data(ui->tvIzvestaj->model()->index(i, 8)).toString()+"</td>";
+        html += "<td>" + modelTableIzvestaj->data(ui->tvIzvestaj->model()->index(i, 9)).toString()+"</td>";
+        html += "</tr>";
+    }
+    html += "</table><br />";
+
+    html += "</body></html>";
+    printHtml(html);
+}
+void IzvestavanjeOSredstvimaD2::printHtml(const QString &html)
+{
+    QPrinter printer;
+    QPrintDialog printDialog(&printer, this);
+    if (printDialog.exec()) {
+        QTextDocument textDocument;
+        textDocument.setHtml(html);
+        textDocument.print(&printer);
+    }
 }

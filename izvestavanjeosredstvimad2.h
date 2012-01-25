@@ -4,6 +4,9 @@
 #include <QtGui/QDialog>
 #include <QSqlQueryModel>
 #include <QMessageBox>
+#include <QPrinter>
+#include <QPrintDialog>
+#include <QTextDocument>
 #include "ui_izvestavanjeosredstvimad2.h"
 
 namespace Ui {
@@ -22,6 +25,9 @@ private slots:
 	void setModelGodina();
 	void on_btnPrikazi_clicked();
 	void on_btnIzadji_clicked();
+	void on_btnOdstampaj_clicked();
+	void printHtml(const QString &html);
+
 
 private:
     Ui::IzvestavanjeOSredstvimaD2 *ui;
