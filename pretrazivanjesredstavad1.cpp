@@ -1,7 +1,4 @@
 #include "pretrazivanjesredstavad1.h"
-#include "ui_pretrazivanjesredstavad1.h"
-#include <QSqlQuery>
-#include <QMessageBox>
 
 PretrazivanjeSredstavaD1::PretrazivanjeSredstavaD1(QWidget *parent, int userId)
     : QDialog(parent),
@@ -109,7 +106,16 @@ void PretrazivanjeSredstavaD1::setModelZaposleni()
 {
 	QComboBox *view = ui->cbZaposleni;
 	modelZaposleni = new QSqlQueryModel();
-	if(!tipNaloga.compare("zaposleni"))
+	if(!tipNaloga.compare("rukovodilac"))
+	{
+		modelZaposleni->setQuery("select -1, 'Svi' union select id, ime || ' ' || prezime from nalog \
+				                  where tip = 'zaposleni' \
+				                  and id_ogranka = (select id_ogranka from nalog where id = " + QString("%1").arg(_userId) + ");");
+		view->setModel(modelZaposleni);
+		view->setModelColumn(1);
+		view->setCurrentIndex(view->findText("Svi"));
+	}
+	else if(!tipNaloga.compare("zaposleni"))
 	{
 		modelZaposleni->setQuery("select id, ime || ' ' || prezime from nalog where id = " + QString("%1").arg(_userId) + ";");
 		view->setModel(modelZaposleni);

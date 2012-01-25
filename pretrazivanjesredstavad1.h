@@ -3,6 +3,8 @@
 
 #include <QtGui/QDialog>
 #include <QSqlQueryModel>
+#include <QSqlQuery>
+#include <QMessageBox>
 #include "ui_pretrazivanjesredstavad1.h"
 
 namespace Ui {
@@ -14,7 +16,7 @@ class PretrazivanjeSredstavaD1 : public QDialog
     Q_OBJECT
 
 public:
-    explicit PretrazivanjeSredstavaD1(QWidget *parent = 0, int userId = 0);
+    PretrazivanjeSredstavaD1(QWidget *parent = 0, int userId = 0);
     ~PretrazivanjeSredstavaD1();
 
 private slots:

@@ -7,6 +7,7 @@
 #include "biranjedobavljacaa4.h"
 #include "pretrazivanjesredstavad1.h"
 #include "raspodeli.h"
+#include "izvestavanjeosredstvimad2.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -74,4 +75,10 @@ void MainWindow::on_btnRaspodeli_clicked()
 {
     Raspodeli *rs = new Raspodeli(this);
     rs->show();
+}
+
+void MainWindow::on_btnIzvestaj_clicked()
+{
+	IzvestavanjeOSredstvimaD2 *is = new IzvestavanjeOSredstvimaD2(this);
+	is->show();
 }
