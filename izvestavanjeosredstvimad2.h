@@ -3,6 +3,7 @@
 
 #include <QtGui/QDialog>
 #include <QSqlQueryModel>
+#include <QMessageBox>
 #include "ui_izvestavanjeosredstvimad2.h"
 
 namespace Ui {
@@ -19,10 +20,13 @@ public:
 
 private slots:
 	void setModelGodina();
+	void on_btnPrikazi_clicked();
+	void on_btnIzadji_clicked();
 
 private:
     Ui::IzvestavanjeOSredstvimaD2 *ui;
     QSqlQueryModel *modelGodina;
+    QSqlQueryModel *modelTableIzvestaj;
 };
 
 #endif // IZVESTAVANJEOSREDSTVIMAD2_H
