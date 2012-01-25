@@ -177,6 +177,13 @@ sredstava</string>
       </item>
      </layout>
     </item>
+    <item row="3" column="2">
+     <widget class="QPushButton" name="btnDobavljaci">
+      <property name="text">
+       <string>Dobavljači</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">

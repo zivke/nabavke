@@ -9,6 +9,7 @@
 #include "raspodeli.h"
 #include "izvestavanjeosredstvimad2.h"
 #include "transport.h"
+#include "dodavanjedobavljaca.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -118,4 +119,10 @@ void MainWindow::on_btnTransport_clicked()
 {
     Transport *tr = new Transport(this);
     tr->show();
+}
+
+void MainWindow::on_btnDobavljaci_clicked()
+{
+    dodavanjedobavljaca *d = new dodavanjedobavljaca();
+    d->show();
 }
