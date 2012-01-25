@@ -6,6 +6,8 @@
 #include "slanjezahtevaa3.h"
 #include "biranjedobavljacaa4.h"
 #include "pretrazivanjesredstavad1.h"
+#include "raspodeli.h"
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -66,4 +68,10 @@ void MainWindow::on_btnPretrazivanje_clicked()
 {
     PretrazivanjeSredstavaD1 *ps = new PretrazivanjeSredstavaD1(this, _userId);
     ps->show();
+}
+
+void MainWindow::on_btnRaspodeli_clicked()
+{
+    Raspodeli *rs = new Raspodeli(this);
+    rs->show();
 }
