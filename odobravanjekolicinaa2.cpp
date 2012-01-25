@@ -13,6 +13,8 @@ OdobravanjeKolicinaA2::OdobravanjeKolicinaA2(QWidget *parent) :
     //setModelStavke(2);
     ui->groupBox->setEnabled(false);
     connect(ui->cbZaposleni, SIGNAL(activated(int)), this, SLOT(zaposleniPromenjen(int)));
+    ui->lbNaziv->setText("");
+    ui->lbKolicina->setText("");
 }
 
 OdobravanjeKolicinaA2::~OdobravanjeKolicinaA2()
@@ -29,6 +31,7 @@ void OdobravanjeKolicinaA2::setModelZaposleni()
     view->setModel(modelZaposleni);
     view->setModelColumn(1);
 }
+
 void OdobravanjeKolicinaA2::setModelStavke(int idZaposlenog)
 {
     QString str;

@@ -13,47 +13,75 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
     <widget class="QTreeView" name="tvStavke"/>
    </item>
-   <item>
-    <widget class="QGroupBox" name="groupBox">
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="groupBox_2">
      <property name="title">
       <string/>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLabel" name="label">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="lbNaziv_2">
+        <property name="text">
+         <string>Naziv</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="lbKolicina_2">
+        <property name="text">
+         <string>Količina</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="lbKolicina_3">
+        <property name="text">
+         <string>Cena</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="lbKolicina_4">
+        <property name="text">
+         <string>Dobavljač</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lbNaziv">
         <property name="text">
          <string>TextLabel</string>
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QLabel" name="label_2">
+      <item row="1" column="1">
+       <widget class="QLabel" name="lbKolicina">
         <property name="text">
          <string>TextLabel</string>
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
-      </item>
-      <item>
+      <item row="1" column="3">
        <widget class="QComboBox" name="cbDobavljac"/>
       </item>
-      <item>
-       <widget class="QPushButton" name="btnPostavi">
+      <item row="1" column="4">
+       <widget class="QPushButton" name="btnOdobri">
         <property name="text">
          <string>Postavi</string>
         </property>
        </widget>
       </item>
+      <item row="1" column="2">
+       <widget class="QDoubleSpinBox" name="inputOdobrena"/>
+      </item>
      </layout>
     </widget>
    </item>
-   <item>
+   <item row="2" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <spacer name="horizontalSpacer">
@@ -70,6 +98,12 @@
      </item>
      <item>
       <widget class="QPushButton" name="btnSacuvajIzadji">
+       <property name="minimumSize">
+        <size>
+         <width>90</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="text">
         <string>Sačuvaj i izađi</string>
        </property>

@@ -5,6 +5,8 @@
 #include "QTextDocument"
 #include <QDesktopServices>
 #include <QUrl>
+#include <QDebug>
+#include <QItemSelectionModel>
 
 SlanjeZahtevaA3::SlanjeZahtevaA3(QWidget *parent) :
     QDialog(parent),
@@ -26,11 +28,14 @@ void SlanjeZahtevaA3::on_btnIzadji_clicked()
 }
 void SlanjeZahtevaA3::setModelDobavljaci()
 {
-    QComboBox *view = ui->cbDobavljaci;
     modelDobavljaci = new QSqlQueryModel();
     modelDobavljaci->setQuery("select * from dobavljac;");
-    view->setModel(modelDobavljaci);
-    view->setModelColumn(1);
+
+
+    QListView *view2 = ui->listView;
+    view2->setModel(modelDobavljaci);
+    view2->setModelColumn(1);
+    view2->setSelectionMode(QAbstractItemView::ExtendedSelection);
 }
 void SlanjeZahtevaA3::setModelStavke()
 {
@@ -100,5 +105,23 @@ void SlanjeZahtevaA3::printHtml(const QString &html)
 
 void SlanjeZahtevaA3::on_btnEmail_clicked()
 {
-    QDesktopServices::openUrl(QUrl("mailto:ilfil9@gmail.com?subject=Test&body=Just a test"));
+    QString html = "Poštovani, \n\nMolim Vas da mi dostavite ponudu za sledece stavke iz vašeg asortimana:\n";
+    QString email; // = modelDobavljaci->data(ui->cbDobavljaci->model()->index(ui->cbDobavljaci->currentIndex(), 3)).toString();
+    QItemSelectionModel *sel = ui->listView->selectionModel();
+
+    QModelIndexList list = sel->selectedIndexes();
+    foreach(QModelIndex index, list)
+        email+=modelDobavljaci->data(ui->listView->model()->index(index.row(), 3)).toString()+"; ";
+
+    email.resize(email.size()-1);
+
+    for (int i =0; i<modelStavke->rowCount(); i++)
+    {
+        html +=QString::number(i+1)+". ";
+        html += modelStavke->data(ui->tvStavke->model()->index(i, 0)).toString()+"\t\t";
+        html += modelStavke->data(ui->tvStavke->model()->index(i, 1)).toString()+" kom.";
+        html += "\n\n";
+    }
+    html +="S poštovanjem";
+    QDesktopServices::openUrl(QUrl("mailto:"+email+"?subject=Zahtev za ponudu&body="+html));
 }
