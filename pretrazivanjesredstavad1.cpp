@@ -59,7 +59,17 @@ void PretrazivanjeSredstavaD1::setModelOrgJedinica()
 {
 	QComboBox *view = ui->cbOrgJedinica;
 	modelOrgJedinica = new QSqlQueryModel();
+
 	if(!tipNaloga.compare("rukovodilac"))
+	{
+		modelOrgJedinica->setQuery("select o.id_ogranka, o.naziv \
+									from ogranak o join nalog n on o.id_ogranka = n.id_ogranka \
+									where n.id = " + QString("%1").arg(_userId) + ";");
+		view->setModel(modelOrgJedinica);
+		view->setModelColumn(1);
+		view->setDisabled(true);
+	}
+	else if(!tipNaloga.compare("zaposleni"))
 	{
 		modelOrgJedinica->setQuery("select o.id_ogranka, o.naziv \
 									from ogranak o join nalog n on o.id_ogranka = n.id_ogranka \
