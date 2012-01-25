@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>317</width>
-    <height>362</height>
+    <width>341</width>
+    <height>436</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,6 +15,41 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Korisnik:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="lbIme">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>ID:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="lbId">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
     <item row="1" column="0">
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
@@ -59,7 +94,7 @@
       </layout>
      </widget>
     </item>
-    <item row="1" column="2">
+    <item row="1" column="2" colspan="2">
      <widget class="QGroupBox" name="groupBox_6">
       <property name="title">
        <string>Sekretar</string>
@@ -91,27 +126,37 @@
       </layout>
      </widget>
     </item>
-    <item row="2" column="1">
+    <item row="2" column="1" colspan="2">
      <widget class="QGroupBox" name="groupBox_5">
       <property name="title">
        <string>Menadžeri</string>
       </property>
-      <widget class="QPushButton" name="btnIzvestaj">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>75</width>
-         <height>25</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Izveštaj</string>
-       </property>
-      </widget>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QPushButton" name="btnIzvestaj">
+         <property name="text">
+          <string>Izveštaj</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnDobavljaci">
+         <property name="text">
+          <string>Dobavljači</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Finansijska odluka</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
-    <item row="2" column="2">
+    <item row="2" column="3">
      <widget class="QPushButton" name="btnPretrazivanje">
       <property name="text">
        <string>Pretraživanje
@@ -142,48 +187,6 @@ sredstava</string>
       </layout>
      </widget>
     </item>
-    <item row="0" column="0" colspan="2">
-     <layout class="QFormLayout" name="formLayout">
-      <item row="0" column="0">
-       <widget class="QLabel" name="label">
-        <property name="text">
-         <string>Korisnik:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QLabel" name="lbIme">
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="wordWrap">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_2">
-        <property name="text">
-         <string>ID:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QLabel" name="lbId">
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="3" column="2">
-     <widget class="QPushButton" name="btnDobavljaci">
-      <property name="text">
-       <string>Dobavljači</string>
-      </property>
-     </widget>
-    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -191,7 +194,7 @@ sredstava</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>317</width>
+     <width>341</width>
      <height>21</height>
     </rect>
    </property>

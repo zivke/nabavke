@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     raspodeli.cpp \
     izvestavanjeosredstvimad2.cpp \
     transport.cpp \
-    dodavanjedobavljaca.cpp
+    dodavanjedobavljaca.cpp \
+    finansijskaodlukaa5.cpp
 
 HEADERS  += mainwindow.h \
     spisakzahtevaa1.h \
@@ -34,7 +35,8 @@ HEADERS  += mainwindow.h \
     raspodeli.h \
     izvestavanjeosredstvimad2.h \
     transport.h \
-    dodavanjedobavljaca.h
+    dodavanjedobavljaca.h \
+    finansijskaodlukaa5.h
 
 FORMS    += mainwindow.ui \
     spisakzahtevaa1.ui \
@@ -46,7 +48,11 @@ FORMS    += mainwindow.ui \
     raspodeli.ui \
     izvestavanjeosredstvimad2.ui \
     transport.ui \
-    dodavanjedobavljaca.ui
+    dodavanjedobavljaca.ui \
+    finansijskaodlukaa5.ui
+
+
+
 
 
 
