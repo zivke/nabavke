@@ -90,7 +90,7 @@ void PretrazivanjeSredstavaD1::setModelDobavljac()
 {
 	QComboBox *view = ui->cbDobavljac;
 	modelDobavljac = new QSqlQueryModel();
-	modelDobavljac->setQuery("select -1, 'Svi', -1 union select * from dobavljac;");
+	modelDobavljac->setQuery("select -1, 'Svi', -1, -1 union select * from dobavljac;");
 	view->setModel(modelDobavljac);
 	view->setModelColumn(1);
 }
