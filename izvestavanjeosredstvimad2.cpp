@@ -78,11 +78,11 @@ QString IzvestavanjeOSredstvimaD2::napraviIzvestaj()
 {
 	QString html;
 	    html += "<html><head></head><body>";
-	    html += "<table width=\"100%\" border=\"5\" cellspacing=\"0\" cellpadding=\"5\"><tr> \
+	    html += "<table width=\"100%\" border=\"2\" cellspacing=\"0\" cellpadding=\"2\"><tr> \
 	    		 <td align=\"center\" bgcolor=\"lightgrey\" bordercolor=\"#666666\"><font size=\"5\" face=\"arial\">IZVESTAJ</font></td></tr></table>";
 
 	    //dodavanje stavki
-	    html +="<br /><table width=\"100%\" border=\"5\" cellspacing=\"0\" cellpadding=\"5\">";
+	    html +="<br /><table width=\"100%\" border=\"2\" cellspacing=\"0\" cellpadding=\"2\">";
 	    html +="<tr><th>RBR</th><th>Artikal</th><th>Mesec</th><th>Godina</th><th>Zaposleni</th><th>Org. Jedinica</th><th>Dobavljac</th><th>Stanje</th><th>Trazena kol.</th><th>Odobrena kol.</th></tr>";
 	    int brR = modelTableIzvestaj->rowCount();
 	    for (int i =0; i<brR; i++)
