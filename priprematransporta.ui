@@ -36,12 +36,12 @@
       <widget class="QPushButton" name="btnpriprema">
        <property name="minimumSize">
         <size>
-         <width>120</width>
+         <width>140</width>
          <height>0</height>
         </size>
        </property>
        <property name="text">
-        <string>Pripremi za transport</string>
+        <string>Pripremljeno za transport</string>
        </property>
       </widget>
      </item>

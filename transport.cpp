@@ -11,6 +11,7 @@ Transport::Transport(QWidget *parent) :
 {
     ui->setupUi(this);
     setModelStavke();
+    ui->bttransport->setEnabled(false);
 
 }
 
@@ -52,6 +53,8 @@ void Transport::updateSelection(const QItemSelection &selected,
     QModelIndexList items = selected.indexes();
     index = items.first();
     _odabranaStavkaId = modelStavke->data(modelStavke->index(index.row(), 5)).toInt();
+
+    ui->bttransport->setEnabled(true);
 }
 
 

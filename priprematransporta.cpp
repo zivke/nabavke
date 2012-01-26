@@ -11,6 +11,7 @@ PripremaTransporta::PripremaTransporta(QWidget *parent) :
 {
     ui->setupUi(this);
     setModelStavke();
+    ui->btnpriprema->setEnabled(false);
 
 }
 
@@ -50,6 +51,8 @@ void PripremaTransporta::updateSelection(const QItemSelection &selected,
     QModelIndexList items = selected.indexes();
     index = items.first();
     _odabranaStavkaId = modelStavke->data(modelStavke->index(index.row(), 5)).toInt();
+
+    ui->btnpriprema->setEnabled(true);
 }
 
 

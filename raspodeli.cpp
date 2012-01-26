@@ -12,6 +12,7 @@ Raspodeli::Raspodeli(QWidget *parent) :
     ui->setupUi(this);
     setModelZaposleni();
     connect(ui->comboZaposleni, SIGNAL(activated(int)), this, SLOT(zaposleniPromenjen(int)));
+    ui->pushButton->setEnabled(false);
 }
 
 Raspodeli::~Raspodeli()
@@ -69,6 +70,7 @@ void Raspodeli::updateSelection(const QItemSelection &selected,
     QModelIndexList items = selected.indexes();
     index = items.first();
     _odabranaStavkaId = modelStavke->data(modelStavke->index(index.row(), 4)).toInt();
+    ui->pushButton->setEnabled(true);
 }
 
 void Raspodeli::changeCurrent(const QModelIndex &current,

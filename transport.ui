@@ -34,8 +34,14 @@
      </item>
      <item>
       <widget class="QPushButton" name="bttransport">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="text">
-        <string>Transportuj</string>
+        <string>Transportovano</string>
        </property>
       </widget>
      </item>
