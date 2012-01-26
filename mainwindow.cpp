@@ -96,7 +96,7 @@ void MainWindow::on_btnSlanjeZahteva_clicked()
 
 void MainWindow::on_btnUnosDiC_clicked()
 {
-    BiranjeDobavljacaA4 *bd = new BiranjeDobavljacaA4();
+    BiranjeDobavljacaA4 *bd = new BiranjeDobavljacaA4(this);
     bd->show();
 }
 
@@ -126,24 +126,24 @@ void MainWindow::on_btnTransport_clicked()
 
 void MainWindow::on_btnDobavljaci_clicked()
 {
-    dodavanjedobavljaca *d = new dodavanjedobavljaca();
+    dodavanjedobavljaca *d = new dodavanjedobavljaca(this);
     d->show();
 }
 
 void MainWindow::on_pushButton_clicked()
 {
-    FinansijskaOdlukaA5 *fo  = new FinansijskaOdlukaA5();
+    FinansijskaOdlukaA5 *fo  = new FinansijskaOdlukaA5(this);
     fo->show();
 }
 
 void MainWindow::on_btnpriprema_clicked()
 {
-    PripremaTransporta *priprema = new PripremaTransporta();
+    PripremaTransporta *priprema = new PripremaTransporta(this);
     priprema->show();
 }
 
 void MainWindow::on_btnSmanjenje_clicked()
 {
-    SmanjenjeZahtevaA6 *sz = new SmanjenjeZahtevaA6();
+    SmanjenjeZahtevaA6 *sz = new SmanjenjeZahtevaA6(this);
     sz->show();
 }

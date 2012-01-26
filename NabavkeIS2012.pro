@@ -57,6 +57,14 @@ FORMS    += mainwindow.ui \
     priprematransporta.ui \
     smanjenjezahtevaa6.ui
 
+RESOURCES += \
+    res.qrc
+
+
+
+
+
+
 
 
 

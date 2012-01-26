@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>IzvestavanjeOSredstvimaD2</string>
+   <string>Izvestavanje o sredstvima</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>

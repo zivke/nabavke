@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Transport Stavki</string>
+   <string>Transport</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
