@@ -102,13 +102,6 @@ sredstava</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="btnRaspodeli">
-         <property name="text">
-          <string>Raspodela</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QPushButton" name="btnpriprema">
          <property name="text">
           <string>Priprema za transport</string>
@@ -206,11 +199,18 @@ sredstava</string>
       <property name="title">
        <string>Sekretari</string>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_5">
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
        <item>
         <widget class="QPushButton" name="btnTransport">
          <property name="text">
           <string>Transport</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnRaspodeli">
+         <property name="text">
+          <string>Raspodela</string>
          </property>
         </widget>
        </item>
@@ -222,18 +222,18 @@ sredstava</string>
       <property name="title">
        <string>Administratori</string>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
-       <item>
-        <widget class="QPushButton" name="pushButton_3">
-         <property name="text">
-          <string>Dektivacija Naloga</string>
-         </property>
-        </widget>
-       </item>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
        <item>
         <widget class="QPushButton" name="pushButton_2">
          <property name="text">
           <string>Kreiraj Nalog</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="text">
+          <string>Dektivacija Naloga</string>
          </property>
         </widget>
        </item>
