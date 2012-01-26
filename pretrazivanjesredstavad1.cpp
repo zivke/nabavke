@@ -109,6 +109,7 @@ void PretrazivanjeSredstavaD1::setModelZaposleni()
 {
 	QComboBox *view = ui->cbZaposleni;
 	modelZaposleni = new QSqlQueryModel();
+
 	if(!tipNaloga.compare("rukovodilac"))
 	{
 		modelZaposleni->setQuery("select -1, 'Svi' union select id, ime || ' ' || prezime from nalog \
@@ -145,7 +146,7 @@ void PretrazivanjeSredstavaD1::on_btnPretrazi_clicked()
 			         join ogranak o on n.id_ogranka = o.id_ogranka \
 			         join dobavljac d on st.id_dobavljaca = d.id_dobavljaca where 1=1";
 
-	if(ui->cbSredstva->currentIndex())
+	if(ui->cbSredstva->currentText().compare("Svi"))
 		query +=" and id_stavke = " + modelSredstva->data(modelSredstva->index(ui->cbSredstva->currentIndex(),0)).toString();
 
 	if(ui->cbMesec->currentIndex())
@@ -163,17 +164,17 @@ void PretrazivanjeSredstavaD1::on_btnPretrazi_clicked()
 	{
 		query +=" and n.id = " + QString("%1").arg(_userId);
 	}
-	else if(ui->cbZaposleni->currentIndex())
+	else if(ui->cbZaposleni->currentText().compare("Svi"))
 			query +=" and n.id = " + modelZaposleni->data(modelZaposleni->index(ui->cbZaposleni->currentIndex(),0)).toString();
 
 	if(!tipNaloga.compare("rukovodilac"))
 	{
 		query +=" and o.id_ogranka = " + modelOrgJedinica->data(modelOrgJedinica->index(ui->cbOrgJedinica->currentIndex(),0)).toString();
 	}
-	else if(ui->cbOrgJedinica->currentIndex())
+	else if(ui->cbOrgJedinica->currentText().compare("Sve"))
 				query +=" and o.id_ogranka = " + modelOrgJedinica->data(modelOrgJedinica->index(ui->cbOrgJedinica->currentIndex(),0)).toString();
 
-	if(ui->cbDobavljac->currentIndex())
+	if(ui->cbDobavljac->currentText().compare("Svi"))
 					query +=" and d.id_dobavljaca = " + modelDobavljac->data(modelDobavljac->index(ui->cbDobavljac->currentIndex(),0)).toString();
 
 	if(ui->cbStatusSredstva->currentText().compare("Svi"))
