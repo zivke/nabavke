@@ -67,7 +67,7 @@ void PretrazivanjeSredstavaD1::setModelOrgJedinica()
 		view->setModelColumn(1);
 		view->setDisabled(true);
 	}
-	else if(!tipNaloga.compare("zaposleni"))
+	else if(!tipNaloga.compare("zaposleni")  || !tipNaloga.compare("referent") || !tipNaloga.compare("magacioner") || !tipNaloga.compare("sekretar"))
 	{
 		modelOrgJedinica->setQuery("select o.id_ogranka, o.naziv \
 									from ogranak o join nalog n on o.id_ogranka = n.id_ogranka \
@@ -119,7 +119,7 @@ void PretrazivanjeSredstavaD1::setModelZaposleni()
 		view->setModelColumn(1);
 		view->setCurrentIndex(view->findText("Svi"));
 	}
-	else if(!tipNaloga.compare("zaposleni"))
+	else if(!tipNaloga.compare("zaposleni") || !tipNaloga.compare("referent") || !tipNaloga.compare("magacioner") || !tipNaloga.compare("sekretar"))
 	{
 		modelZaposleni->setQuery("select id, ime || ' ' || prezime from nalog where id = " + QString("%1").arg(_userId) + ";");
 		view->setModel(modelZaposleni);
@@ -128,7 +128,7 @@ void PretrazivanjeSredstavaD1::setModelZaposleni()
 	}
 	else
 	{
-		modelZaposleni->setQuery("select -1, 'Svi' union select id, ime || ' ' || prezime from nalog where tip = 'zaposleni';");
+		modelZaposleni->setQuery("select -1, 'Svi' union select id, ime || ' ' || prezime from nalog;");
 		view->setModel(modelZaposleni);
 		view->setModelColumn(1);
 		view->setCurrentIndex(view->findText("Svi"));
