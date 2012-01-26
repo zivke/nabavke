@@ -43,20 +43,13 @@ void Raspodeli::setModelStavke(int idZaposlenog)
                           join artikal on stavka.id_artikla=artikal.id_artikla \
                           join spisak on stavka.id_spiska = spisak.id_spiska \
                           join nalog on spisak.id_naloga = nalog.id where status = 'U_ORG_JED' and nalog.id = \""+ str+"\"");
-  /*  QSqlRecord recordo = new QSqlRecord;
-     recordo = modelStavke.record(1);
-
-            recordo.setValue("salary");
-            modelStavke.setRecord(i, recordo);
-*/
 
 
     modelStavke->setHeaderData(2, Qt::Horizontal, "Naziv");
     modelStavke->setHeaderData(3, Qt::Horizontal, "Kolicina");
-    modelStavke->setHeaderData(1, Qt::Horizontal, "Status");
     view->setModel(modelStavke);
     view->setColumnHidden(0, true);
-   // view->setColumnHidden(1, true);
+    view->setColumnHidden(1, true);
     view->setColumnHidden(4, true);
     view->setSortingEnabled(true);
     selectionModel = ui->treeStavke->selectionModel();
