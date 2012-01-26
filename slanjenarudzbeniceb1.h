@@ -15,6 +15,9 @@ public:
     explicit SlanjeNarudzbeniceB1(QWidget *parent = 0);
     ~SlanjeNarudzbeniceB1();
 
+private slots:
+    void on_btnIzadji_clicked();
+
 private:
     Ui::SlanjeNarudzbeniceB1 *ui;
 };
