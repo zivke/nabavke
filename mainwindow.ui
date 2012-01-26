@@ -73,7 +73,7 @@ sredstava</string>
      </layout>
     </item>
     <item>
-     <widget class="QGroupBox" name="groupBox">
+     <widget class="QGroupBox" name="gbZaposleni">
       <property name="title">
        <string>Zaposleni</string>
       </property>
@@ -89,7 +89,7 @@ sredstava</string>
      </widget>
     </item>
     <item>
-     <widget class="QGroupBox" name="groupBox_4">
+     <widget class="QGroupBox" name="gbMagacioneri">
       <property name="title">
        <string>Magacioneri</string>
       </property>
@@ -112,7 +112,7 @@ sredstava</string>
      </widget>
     </item>
     <item>
-     <widget class="QGroupBox" name="groupBox_2">
+     <widget class="QGroupBox" name="gbRukovodioci">
       <property name="title">
        <string>Rukovodioci</string>
       </property>
@@ -128,7 +128,7 @@ sredstava</string>
      </widget>
     </item>
     <item>
-     <widget class="QGroupBox" name="groupBox_3">
+     <widget class="QGroupBox" name="gbReferenti">
       <property name="title">
        <string>Referenti</string>
       </property>
@@ -158,7 +158,7 @@ sredstava</string>
      </widget>
     </item>
     <item>
-     <widget class="QGroupBox" name="groupBox_5">
+     <widget class="QGroupBox" name="gbMenadzeri">
       <property name="title">
        <string>Menadžeri</string>
       </property>
@@ -188,9 +188,9 @@ sredstava</string>
      </widget>
     </item>
     <item>
-     <widget class="QGroupBox" name="groupBox_6">
+     <widget class="QGroupBox" name="gbSekretari">
       <property name="title">
-       <string>Sekretar</string>
+       <string>Sekretari</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_5">
        <item>
@@ -204,9 +204,9 @@ sredstava</string>
      </widget>
     </item>
     <item>
-     <widget class="QGroupBox" name="groupBox_7">
+     <widget class="QGroupBox" name="gbAdministratori">
       <property name="title">
-       <string>Admin</string>
+       <string>Administratori</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>

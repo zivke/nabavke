@@ -53,7 +53,7 @@ void MainWindow::inicijalizacija(QString ime, int id)
 
     ui->lbId->setText(str);
 
-/******** Onemogucavanje dugmica po tipu naloga korisnika ********
+/************* Iskljucivanje dugmica *****************************
 
     QSqlQuery query;
 	query.prepare( "SELECT tip FROM nalog WHERE id = ?");
@@ -65,23 +65,46 @@ void MainWindow::inicijalizacija(QString ime, int id)
 
 	if(!_tipNaloga.compare("zaposleni"))
     {
-    	ui->btnIzvestaj->setEnabled(false);
-    	ui->btnOdobravanje->setEnabled(false);
-    	ui->btnRaspodeli->setEnabled(false);
-    	ui->btnTransport->setEnabled(false);
-    	ui->btnUnosDiC->setEnabled(false);
-    	ui->btnSlanjeZahteva->setEnabled(false);
+    	ui->gbAdministratori->setEnabled(false);
+    	ui->gbMagacioneri->setEnabled(false);
+    	ui->gbMenadzeri->setEnabled(false);
+    	ui->gbReferenti->setEnabled(false);
+    	ui->gbRukovodioci->setEnabled(false);
+    	ui->gbSekretari->setEnabled(false);
     }
 	else if(!_tipNaloga.compare("rukovodilac"))
 	{
-		ui->btnZahtevi->setEnabled(false);
-		ui->btnIzvestaj->setEnabled(false);
-		ui->btnRaspodeli->setEnabled(false);
-		ui->btnTransport->setEnabled(false);
-		ui->btnUnosDiC->setEnabled(false);
-		ui->btnSlanjeZahteva->setEnabled(false);
+		ui->gbAdministratori->setEnabled(false);
+		ui->gbMagacioneri->setEnabled(false);
+		ui->gbMenadzeri->setEnabled(false);
+		ui->gbReferenti->setEnabled(false);
+		ui->gbSekretari->setEnabled(false);
 	}
-*****************************************************************/
+	else if(!_tipNaloga.compare("referent_sluzbe"))
+	{
+		ui->gbAdministratori->setEnabled(false);
+		ui->gbMagacioneri->setEnabled(false);
+		ui->gbMenadzeri->setEnabled(false);
+		ui->gbRukovodioci->setEnabled(false);
+		ui->gbSekretari->setEnabled(false);
+	}
+	else if(!_tipNaloga.compare("menadzer"))
+	{
+		ui->gbAdministratori->setEnabled(false);
+		ui->gbMagacioneri->setEnabled(false);
+		ui->gbReferenti->setEnabled(false);
+		ui->gbRukovodioci->setEnabled(false);
+		ui->gbSekretari->setEnabled(false);
+	}
+	else if(!_tipNaloga.compare("sekretar"))
+	{
+		ui->gbAdministratori->setEnabled(false);
+		ui->gbMagacioneri->setEnabled(false);
+		ui->gbMenadzeri->setEnabled(false);
+		ui->gbReferenti->setEnabled(false);
+		ui->gbRukovodioci->setEnabled(false);
+	}
+*********************************************************/
 }
 
 void MainWindow::on_btnOdobravanje_clicked()
