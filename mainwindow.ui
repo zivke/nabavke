@@ -208,32 +208,22 @@ sredstava</string>
       <property name="title">
        <string>Admin</string>
       </property>
-      <widget class="QPushButton" name="pushButton_2">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>211</width>
-         <height>23</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Kreiraj Nalog</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_3">
-       <property name="geometry">
-        <rect>
-         <x>234</x>
-         <y>20</y>
-         <width>201</width>
-         <height>23</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Dektivacija Naloga</string>
-       </property>
-      </widget>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="text">
+          <string>Dektivacija Naloga</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string>Kreiraj Nalog</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
    </layout>
@@ -244,7 +234,7 @@ sredstava</string>
      <x>0</x>
      <y>0</y>
      <width>468</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
