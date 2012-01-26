@@ -1,7 +1,6 @@
 #include "transport.h"
 #include "ui_transport.h"
 #include <QMessageBox>
-#include <QDebug>
 #include <QSqlQuery>
 #include <QSqlError>
 
@@ -66,7 +65,6 @@ void Transport::on_bttransport_clicked()
     QSqlQuery query;
     query.prepare(QString("UPDATE stavka SET status ='U_ORG_JED' WHERE id_artikla='%1'").arg(_odabranaStavkaId));
         if(!query.exec()){
-            qDebug() << query.lastQuery();
             QMessageBox::warning(this, "Transport stavke", "Greska prilikom transporta stavke.");
         }
         else{

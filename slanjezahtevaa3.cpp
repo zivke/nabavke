@@ -5,7 +5,6 @@
 #include "QTextDocument"
 #include <QDesktopServices>
 #include <QUrl>
-#include <QDebug>
 #include <QItemSelectionModel>
 
 SlanjeZahtevaA3::SlanjeZahtevaA3(QWidget *parent) :

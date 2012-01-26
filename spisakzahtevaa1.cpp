@@ -1,7 +1,6 @@
 #include "spisakzahtevaa1.h"
 #include "ui_spisakzahtevaa1.h"
 #include <QSqlQuery>
-#include <QDebug>
 #include <QMessageBox>
 #include <QSqlError>
 

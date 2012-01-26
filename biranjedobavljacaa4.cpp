@@ -1,7 +1,6 @@
 #include "biranjedobavljacaa4.h"
 #include "ui_biranjedobavljacaa4.h"
 #include <QSqlQuery>
-#include <QDebug>
 #include <QMessageBox>
 
 BiranjeDobavljacaA4::BiranjeDobavljacaA4(QWidget *parent) :
@@ -94,7 +93,6 @@ void BiranjeDobavljacaA4::on_btnSacuvajIzadji_clicked()
     QSqlQuery query;
     query.prepare(QString("UPDATE stavka SET status=%1 WHERE id_artikla in (%2)").arg("'KOMPLETIRANO'").arg(qs));
     if(!query.exec()){
-        qDebug() << query.lastQuery();
         QMessageBox::warning(this, "Odobravanje stavki", "Greska prilikom odobravanja stavki.");
     }
     else{
@@ -110,7 +108,6 @@ void BiranjeDobavljacaA4::on_btnOdobri_clicked()
     float cena = ui->inputOdobrena->value();
     query.prepare(QString("UPDATE stavka SET cena=%1, id_dobavljaca='%2' WHERE id_artikla='%3'").arg(cena).arg(idDobavljaca).arg(_idArtika));
     if(!query.exec()){
-        qDebug() << query.lastQuery();
         QMessageBox::warning(this, "Kompletiranje stavke", "Greska prilikom kompletiranja stavke.");
     }
     else{

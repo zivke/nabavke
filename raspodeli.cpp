@@ -1,7 +1,7 @@
 #include "raspodeli.h"
 #include "ui_raspodeli.h"
 #include <QMessageBox>
-#include <QDebug>
+
 #include <QSqlQuery>
 #include <QSqlError>
 
@@ -96,7 +96,6 @@ void Raspodeli::on_pushButton_clicked()
 
     query.prepare(QString("UPDATE stavka SET status ='RASPODELJENO' WHERE id_stavke='%1'").arg(_odabranaStavkaId));
     if(!query.exec()){
-        qDebug() << query.lastQuery();
         QMessageBox::warning(this, "Raspodela stavke", "Greska prilikom raspodele stavke.");
     }
     else{
@@ -125,7 +124,6 @@ void Raspodeli::on_zapamti_clicked()
        QSqlQuery query;
        query.prepare(QString("UPDATE stavka SET status=%1 WHERE id_stavke in (%2)").arg("'RASPOREDJENO'").arg(qs));
        if(!query.exec()){
-           qDebug() << query.lastQuery();
            QMessageBox::warning(this, "Raspodela stavki", "Greska prilikom raspodele stavki.");
        }
        else{

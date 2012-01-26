@@ -8,7 +8,6 @@ IzvestavanjeOSredstvimaD2::IzvestavanjeOSredstvimaD2(QWidget *parent)
 	setModelGodina();
 	ui->btnOdstampaj->setEnabled(false);
 	ui->btnSacuvaj->setEnabled(false);
-
 }
 
 IzvestavanjeOSredstvimaD2::~IzvestavanjeOSredstvimaD2()

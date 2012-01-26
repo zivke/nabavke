@@ -2,7 +2,6 @@
 #include "ui_kreiranjenalogae1.h"
 #include <QSqlQuery>
 #include <QCryptographicHash>
-#include <QDebug>
 #include <QMessageBox>
 #include <QSqlError>
 #include<QTextEdit>

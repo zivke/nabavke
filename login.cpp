@@ -3,7 +3,6 @@
 #include <QCryptographicHash>
 #include <QSqlQuery>
 #include <QMessageBox>
-#include <QDebug>
 #include <QSqlError>
 
 Login::Login(QWidget *parent) :
@@ -40,8 +39,6 @@ void Login::on_btnLogin_clicked()
         }
         else{
             query.first();
-            qDebug() << query.numRowsAffected();
-            qDebug() << query.isNull(4);
             if(!query.isNull(4))
             {
                 emit ucitanKorisnik(query.value(2).toString()+" "+query.value(3).toString(), query.value(0).toInt());
@@ -51,8 +48,6 @@ void Login::on_btnLogin_clicked()
             }
             else
             {
-                qDebug() << query.lastError();
-                qDebug() << query.lastQuery();
                 QMessageBox::warning(this, "Povezivanje", "Nemoguce pronalazenje klijenta.");
                 ui->inputPass->setText("");
                 ui->inputUser->setText("");

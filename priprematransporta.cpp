@@ -1,7 +1,6 @@
 #include "priprematransporta.h"
 #include "ui_priprematransporta.h"
 #include <QMessageBox>
-#include <QDebug>
 #include <QSqlQuery>
 #include <QSqlError>
 
@@ -62,7 +61,6 @@ void PripremaTransporta::on_btnpriprema_clicked()
     QSqlQuery query;
        query.prepare(QString("UPDATE stavka SET status ='U_TRANSPORTU' WHERE id_artikla='%1'").arg(_odabranaStavkaId));
            if(!query.exec()){
-               qDebug() << query.lastQuery();
                QMessageBox::warning(this, "Transport stavke", "Greska prilikom transporta stavke.");
            }
            else{

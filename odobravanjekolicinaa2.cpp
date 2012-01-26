@@ -1,7 +1,6 @@
 #include "odobravanjekolicinaa2.h"
 #include "ui_odobravanjekolicinaa2.h"
 #include <QMessageBox>
-#include <QDebug>
 #include <QSqlQuery>
 #include <QSqlError>
 OdobravanjeKolicinaA2::OdobravanjeKolicinaA2(QWidget *parent) :
@@ -83,7 +82,7 @@ void OdobravanjeKolicinaA2::zaposleniPromenjen(int index)
 {
     _odabraniUser = index;
     setModelStavke(modelZaposleni->data(modelZaposleni->index(_odabraniUser, 0)).toInt());
-    //qDebug() << _odabraniUser;
+
 
 }
 
@@ -93,7 +92,6 @@ void OdobravanjeKolicinaA2::on_btnOdobri_clicked()
     int kolicina = ui->inputOdobrena->value();
     query.prepare(QString("UPDATE stavka SET odobrena_kol=%1 WHERE id_stavke='%2'").arg(kolicina).arg(_odabranaStavkaId));
     if(!query.exec()){
-        qDebug() << query.lastQuery();
         QMessageBox::warning(this, "Odobravanje stavke", "Greska prilikom odobravanja stavke.");
     }
     else{
@@ -117,7 +115,6 @@ void OdobravanjeKolicinaA2::on_btnSaveExit_clicked()
     QSqlQuery query;
     query.prepare(QString("UPDATE stavka SET status=%1 WHERE id_stavke in (%2)").arg("'ODOBRENO'").arg(qs));
     if(!query.exec()){
-        qDebug() << query.lastQuery();
         QMessageBox::warning(this, "Odobravanje stavki", "Greska prilikom odobravanja stavki.");
     }
     else{
