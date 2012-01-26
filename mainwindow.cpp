@@ -14,6 +14,7 @@
 #include "priprematransporta.h"
 #include "smanjenjezahtevaa6.h"
 #include "kreiranjenalogae1.h"
+#include "slanjenarudzbeniceb1.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -153,4 +154,11 @@ void MainWindow::on_pushButton_2_clicked()
 {
     kreiranjenalogae1 *kn = new kreiranjenalogae1();
     kn->show();
+}
+
+void MainWindow::on_btnNarudzbenice_clicked()
+{
+    SlanjeNarudzbeniceB1 *sn = new SlanjeNarudzbeniceB1(this);
+    sn->show();
+
 }

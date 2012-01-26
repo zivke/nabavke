@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>468</width>
-    <height>607</height>
+    <width>608</width>
+    <height>579</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -148,6 +148,13 @@ sredstava</string>
         </widget>
        </item>
        <item>
+        <widget class="QPushButton" name="btnNarudzbenice">
+         <property name="text">
+          <string>Slanje narudžbenice</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QPushButton" name="btnSlanjeZahteva">
          <property name="text">
           <string>Slanje zahteva</string>
@@ -243,7 +250,7 @@ sredstava</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>468</width>
+     <width>608</width>
      <height>20</height>
     </rect>
    </property>
