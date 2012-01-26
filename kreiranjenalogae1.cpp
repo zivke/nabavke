@@ -1,10 +1,5 @@
 #include "kreiranjenalogae1.h"
 #include "ui_kreiranjenalogae1.h"
-#include <QSqlQuery>
-#include <QCryptographicHash>
-#include <QMessageBox>
-#include <QSqlError>
-#include<QTextEdit>
 
 kreiranjenalogae1::kreiranjenalogae1(QWidget *parent) :
     QWidget(parent),
@@ -12,7 +7,7 @@ kreiranjenalogae1::kreiranjenalogae1(QWidget *parent) :
     ui(new Ui::kreiranjenalogae1)
 {
     ui->setupUi(this);
-    ui->lineEdit_4->setEchoMode(QLineEdit::Password);
+    ui->lePassword->setEchoMode(QLineEdit::Password);
     setModelOgranakComboBox();
 }
 
@@ -23,34 +18,32 @@ kreiranjenalogae1::~kreiranjenalogae1()
 
 void kreiranjenalogae1::setModelOgranakComboBox()
 {
-        QComboBox *view = ui->comboBox_2;
-        modelCombo = new QSqlTableModel(this);
-        modelCombo->setTable("nalog");
-        modelCombo->setEditStrategy(QSqlTableModel::OnManualSubmit);
-        modelCombo->select();
-        view->setModel(modelCombo);
+        QComboBox *view = ui->cbOgranak;
+        modelOgranak = new QSqlQueryModel();
+        modelOgranak->setQuery("select * from ogranak;");
+        view->setModel(modelOgranak);
         view->setModelColumn(1);
 }
 
-void kreiranjenalogae1::on_pushButton_clicked()
+void kreiranjenalogae1::on_btnOdustani_clicked()
 {
     this->close();
 }
 
-void kreiranjenalogae1::on_pushButton_2_clicked()
+void kreiranjenalogae1::on_btnSacuvajIzadji_clicked()
 {
     //inicijalizujemo vrednosti koje unosimo u bazu
-    QString ime=ui->lineEdit->text();
-    QString prezime=ui->lineEdit_2->text();
-    QString username=ui->lineEdit_3->text();
-    QString password1=ui->lineEdit_4->text();
+    QString ime=ui->leIme->text();
+    QString prezime=ui->lePrezime->text();
+    QString username=ui->leUsername->text();
+    QString password1=ui->lePassword->text();
     QString password = QString(QCryptographicHash::hash(password1.toUtf8(),QCryptographicHash::Md5).toHex());
-    QString tip =ui->comboBox->currentText();
-    int ogranak = modelCombo->data(modelCombo->index(ui->comboBox_2->currentIndex(), 0)).toInt();
+    QString tip =ui->cbTipKorisnika->currentText();
+    int ogranak = modelOgranak->data(modelOgranak->index(ui->cbOgranak->currentIndex(), 0)).toInt();
 
     //Unosimo vrednosti u bazu podataka
     QSqlQuery q;
-    q.prepare("insert into nalog (id_ogranka, ime, prezime, user, pass, tip) values (?, ?, ?, ?,?,?)");
+    q.prepare("insert into nalog (id_ogranka, ime, prezime, user, pass, tip) values (?, ?, ?, ?, ?, ?)");
     q.bindValue(0, ogranak);
     q.bindValue(1, ime);
     q.bindValue(2, prezime);
@@ -64,5 +57,7 @@ void kreiranjenalogae1::on_pushButton_2_clicked()
      this->close();
     }
     else
-    {QMessageBox::warning(this, "Kreiranje naloga", "Greska prilikom kreiranja naloga");}
+    {
+    	QMessageBox::warning(this, "Kreiranje naloga", "Greska prilikom kreiranja naloga");
+    }
 }

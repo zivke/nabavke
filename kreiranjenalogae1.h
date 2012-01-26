@@ -2,8 +2,12 @@
 #define KREIRANJENALOGAE1_H
 
 #include <QWidget>
-#include <QSqlTableModel>
 #include <QSqlQueryModel>
+#include <QSqlQuery>
+#include <QCryptographicHash>
+#include <QMessageBox>
+#include <QSqlError>
+#include <QTextEdit>
 
 namespace Ui {
     class kreiranjenalogae1;
@@ -18,15 +22,15 @@ public:
     ~kreiranjenalogae1();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_btnOdustani_clicked();
 
 
-    void on_pushButton_2_clicked();
+    void on_btnSacuvajIzadji_clicked();
 
 private:
     Ui::kreiranjenalogae1 *ui;
     void setModelOgranakComboBox();
-    QSqlTableModel *modelCombo;
+    QSqlQueryModel *modelOgranak;
 };
 
 #endif // KREIRANJENALOGAE1_H
