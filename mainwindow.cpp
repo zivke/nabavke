@@ -13,6 +13,7 @@
 #include "finansijskaodlukaa5.h"
 #include "priprematransporta.h"
 #include "smanjenjezahtevaa6.h"
+#include "kreiranjenalogae1.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -146,4 +147,10 @@ void MainWindow::on_btnSmanjenje_clicked()
 {
     SmanjenjeZahtevaA6 *sz = new SmanjenjeZahtevaA6(this);
     sz->show();
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    kreiranjenalogae1 *kn = new kreiranjenalogae1();
+    kn->show();
 }

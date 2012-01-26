@@ -24,7 +24,8 @@ SOURCES += main.cpp\
     dodavanjedobavljaca.cpp \
     finansijskaodlukaa5.cpp \
     priprematransporta.cpp \
-    smanjenjezahtevaa6.cpp
+    smanjenjezahtevaa6.cpp \
+    kreiranjenalogae1.cpp
 
 HEADERS  += mainwindow.h \
     spisakzahtevaa1.h \
@@ -40,7 +41,8 @@ HEADERS  += mainwindow.h \
     dodavanjedobavljaca.h \
     finansijskaodlukaa5.h \
     priprematransporta.h \
-    smanjenjezahtevaa6.h
+    smanjenjezahtevaa6.h \
+    kreiranjenalogae1.h
 
 FORMS    += mainwindow.ui \
     spisakzahtevaa1.ui \
@@ -55,10 +57,20 @@ FORMS    += mainwindow.ui \
     dodavanjedobavljaca.ui \
     finansijskaodlukaa5.ui \
     priprematransporta.ui \
-    smanjenjezahtevaa6.ui
+    smanjenjezahtevaa6.ui \
+    kreiranjenalogae1.ui
 
 RESOURCES += \
     res.qrc
+
+
+
+
+
+
+
+
+
 
 
 

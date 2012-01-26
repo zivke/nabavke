@@ -41,6 +41,8 @@ private slots:
 
     void on_btnSmanjenje_clicked();
 
+    void on_pushButton_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     int _userId;
