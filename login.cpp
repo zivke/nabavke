@@ -29,13 +29,23 @@ void Login::on_btnLogin_clicked()
     QSqlQuery query;
     query.prepare("SELECT * FROM nalog WHERE user=\""+user+"\" AND pass=\""+pass+"\" ");
     if(!query.exec())
+    {
         QMessageBox::warning(this, "Povezivanje", "Nemoguce pronalazenje klijenta.");
-    query.first();
+        ui->inputPass->setText("");
+        ui->inputUser->setText("");
+    }
+    else{
+        query.first();
 
-    //qDebug() << pass;
-    //QMessageBox::warning(this, "naslov", "User: "+query.value(2).toString()+" "+query.value(3).toString());
+        //qDebug() << pass;
+        //QMessageBox::warning(this, "naslov", "User: "+query.value(2).toString()+" "+query.value(3).toString());
 
-    emit ucitanKorisnik(query.value(2).toString()+" "+query.value(3).toString(), query.value(0).toInt());
-    _parent->setEnabled(true);
-    this->close();
+        emit ucitanKorisnik(query.value(2).toString()+" "+query.value(3).toString(), query.value(0).toInt());
+        _parent->setEnabled(true);
+        this->close();
+    }
+}
+void Login::closeEvent(QCloseEvent *event)
+{
+    _parent->close();
 }

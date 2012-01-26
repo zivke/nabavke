@@ -18,7 +18,7 @@ signals:
     void ucitanKorisnik(QString, int);
 private slots:
     void on_btnLogin_clicked();
-
+    void closeEvent(QCloseEvent *event);
 private:
     Ui::Login *ui;
     QWidget *_parent;
