@@ -14,8 +14,7 @@
 #include "priprematransporta.h"
 #include "smanjenjezahtevaa6.h"
 #include "kreiranjenalogae1.h"
-#include "slanjenarudzbeniceb1.h"
-#include "prijemsredstavab2.h"
+#include "deaktivacijanalogae2.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -157,15 +156,8 @@ void MainWindow::on_pushButton_2_clicked()
     kn->show();
 }
 
-void MainWindow::on_btnNarudzbenice_clicked()
+void MainWindow::on_pushButton_3_clicked()
 {
-    SlanjeNarudzbeniceB1 *sn = new SlanjeNarudzbeniceB1(this);
-    sn->show();
-
-}
-
-void MainWindow::on_pushButton_4_clicked()
-{
-    PrijemSredstavaB2 *ps = new PrijemSredstavaB2(this);
-    ps->show();
+    deaktivacijanalogae2 *dn = new deaktivacijanalogae2();
+    dn->show();
 }

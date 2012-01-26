@@ -42,10 +42,8 @@ private slots:
     void on_btnSmanjenje_clicked();
 
     void on_pushButton_2_clicked();
-    void on_btnNarudzbenice_clicked();
 
-
-    void on_pushButton_4_clicked();
+    void on_pushButton_3_clicked();
 
 private:
     Ui::MainWindow *ui;
