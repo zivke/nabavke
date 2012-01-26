@@ -1,5 +1,6 @@
 #include "smanjenjezahtevaa6.h"
 #include "ui_smanjenjezahtevaa6.h"
+#include "QSqlQueryModel"
 
 SmanjenjeZahtevaA6::SmanjenjeZahtevaA6(QWidget *parent) :
     QDialog(parent),
