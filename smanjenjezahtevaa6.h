@@ -15,6 +15,9 @@ public:
     explicit SmanjenjeZahtevaA6(QWidget *parent = 0);
     ~SmanjenjeZahtevaA6();
 
+private slots:
+    void on_pushButton_3_clicked();
+
 private:
     Ui::SmanjenjeZahtevaA6 *ui;
 };
