@@ -15,7 +15,8 @@
 #include "smanjenjezahtevaa6.h"
 #include "kreiranjenalogae1.h"
 #include "deaktivacijanalogae2.h"
-
+#include "slanjenarudzbeniceb1.h"
+#include "prijemsredstavab2.h"
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -183,4 +184,16 @@ void MainWindow::on_pushButton_3_clicked()
 {
     deaktivacijanalogae2 *dn = new deaktivacijanalogae2();
     dn->show();
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    SlanjeNarudzbeniceB1 *sn = new SlanjeNarudzbeniceB1(this);
+    sn->show();
+}
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    PrijemSredstavaB2 *ps = new PrijemSredstavaB2(this);
+    ps->show();
 }

@@ -121,3 +121,8 @@ void OdobravanjeKolicinaA2::on_btnSaveExit_clicked()
         this->close();
     }
 }
+
+void OdobravanjeKolicinaA2::on_pushButton_clicked()
+{
+    this->close();
+}

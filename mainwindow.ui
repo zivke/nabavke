@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>468</width>
-    <height>607</height>
+    <width>601</width>
+    <height>574</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -95,16 +95,23 @@ sredstava</string>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="text">
+          <string>Prijem</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QPushButton" name="btnRaspodeli">
          <property name="text">
-          <string>Raspodeli</string>
+          <string>Raspodela</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="btnpriprema">
          <property name="text">
-          <string>Priprema za Transport</string>
+          <string>Priprema za transport</string>
          </property>
         </widget>
        </item>
@@ -144,6 +151,13 @@ sredstava</string>
         <widget class="QPushButton" name="btnUnosDiC">
          <property name="text">
           <string>Unos dobavljača i cena</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="text">
+          <string>Slanje narudzbenice</string>
          </property>
         </widget>
        </item>
@@ -233,7 +247,7 @@ sredstava</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>468</width>
+     <width>601</width>
      <height>21</height>
     </rect>
    </property>
