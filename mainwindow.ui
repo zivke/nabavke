@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>341</width>
+    <width>355</width>
     <height>436</height>
    </rect>
   </property>
@@ -191,6 +191,13 @@ sredstava</string>
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QPushButton" name="btnSmanjenje">
+         <property name="text">
+          <string>Smanjenje zahteva</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
@@ -201,7 +208,7 @@ sredstava</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>341</width>
+     <width>355</width>
      <height>21</height>
     </rect>
    </property>

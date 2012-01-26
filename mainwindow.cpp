@@ -12,6 +12,7 @@
 #include "dodavanjedobavljaca.h"
 #include "finansijskaodlukaa5.h"
 #include "priprematransporta.h"
+#include "smanjenjezahtevaa6.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -139,4 +140,10 @@ void MainWindow::on_btnpriprema_clicked()
 {
     PripremaTransporta *priprema = new PripremaTransporta();
     priprema->show();
+}
+
+void MainWindow::on_btnSmanjenje_clicked()
+{
+    SmanjenjeZahtevaA6 *sz = new SmanjenjeZahtevaA6();
+    sz->show();
 }
