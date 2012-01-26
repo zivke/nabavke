@@ -97,14 +97,21 @@ sredstava</string>
        <item>
         <widget class="QPushButton" name="btnRaspodeli">
          <property name="text">
-          <string>Raspodeli</string>
+          <string>Raspodela</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="text">
+          <string>Prijem</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="btnpriprema">
          <property name="text">
-          <string>Priprema za Transport</string>
+          <string>Priprema za transport</string>
          </property>
         </widget>
        </item>
@@ -251,7 +258,7 @@ sredstava</string>
      <x>0</x>
      <y>0</y>
      <width>608</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

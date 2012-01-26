@@ -26,7 +26,8 @@ SOURCES += main.cpp\
     priprematransporta.cpp \
     smanjenjezahtevaa6.cpp \
     kreiranjenalogae1.cpp \
-    slanjenarudzbeniceb1.cpp
+    slanjenarudzbeniceb1.cpp \
+    prijemsredstavab2.cpp
 
 HEADERS  += mainwindow.h \
     spisakzahtevaa1.h \
@@ -44,7 +45,8 @@ HEADERS  += mainwindow.h \
     priprematransporta.h \
     smanjenjezahtevaa6.h \
     kreiranjenalogae1.h \
-    slanjenarudzbeniceb1.h
+    slanjenarudzbeniceb1.h \
+    prijemsredstavab2.h
 
 FORMS    += mainwindow.ui \
     spisakzahtevaa1.ui \
@@ -61,10 +63,14 @@ FORMS    += mainwindow.ui \
     priprematransporta.ui \
     smanjenjezahtevaa6.ui \
     kreiranjenalogae1.ui \
-    slanjenarudzbeniceb1.ui
+    slanjenarudzbeniceb1.ui \
+    prijemsredstavab2.ui
 
 RESOURCES += \
     res.qrc
+
+
+
 
 
 

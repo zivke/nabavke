@@ -15,6 +15,7 @@
 #include "smanjenjezahtevaa6.h"
 #include "kreiranjenalogae1.h"
 #include "slanjenarudzbeniceb1.h"
+#include "prijemsredstavab2.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -161,4 +162,10 @@ void MainWindow::on_btnNarudzbenice_clicked()
     SlanjeNarudzbeniceB1 *sn = new SlanjeNarudzbeniceB1(this);
     sn->show();
 
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    PrijemSredstavaB2 *ps = new PrijemSredstavaB2(this);
+    ps->show();
 }
