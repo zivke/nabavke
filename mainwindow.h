@@ -37,6 +37,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_btnpriprema_clicked();
+
 private:
     Ui::MainWindow *ui;
     int _userId;

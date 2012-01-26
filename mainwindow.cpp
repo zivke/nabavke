@@ -11,6 +11,8 @@
 #include "transport.h"
 #include "dodavanjedobavljaca.h"
 #include "finansijskaodlukaa5.h"
+#include "priprematransporta.h"
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -131,4 +133,10 @@ void MainWindow::on_pushButton_clicked()
 {
     FinansijskaOdlukaA5 *fo  = new FinansijskaOdlukaA5();
     fo->show();
+}
+
+void MainWindow::on_btnpriprema_clicked()
+{
+    PripremaTransporta *priprema = new PripremaTransporta();
+    priprema->show();
 }

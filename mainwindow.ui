@@ -85,6 +85,13 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
+        <widget class="QPushButton" name="btnpriprema">
+         <property name="text">
+          <string>Priprema za Transport</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QPushButton" name="btnRaspodeli">
          <property name="text">
           <string>Raspodeli</string>
