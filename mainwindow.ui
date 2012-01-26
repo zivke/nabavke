@@ -6,91 +6,84 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>355</width>
-    <height>436</height>
+    <width>468</width>
+    <height>607</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Sistem za nabavke</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <layout class="QFormLayout" name="formLayout">
-      <item row="0" column="0">
-       <widget class="QLabel" name="label">
-        <property name="text">
-         <string>Korisnik:</string>
-        </property>
-       </widget>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Korisnik:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="lbIme">
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>ID:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="lbId">
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
-      <item row="0" column="1">
-       <widget class="QLabel" name="lbIme">
+      <item>
+       <widget class="QPushButton" name="btnPretrazivanje">
         <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="wordWrap">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_2">
-        <property name="text">
-         <string>ID:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QLabel" name="lbId">
-        <property name="text">
-         <string>TextLabel</string>
+         <string>Pretraživanje
+sredstava</string>
         </property>
        </widget>
       </item>
      </layout>
     </item>
-    <item row="1" column="0">
+    <item>
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
        <string>Zaposleni</string>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
         <widget class="QPushButton" name="btnZahtevi">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-           <horstretch>60</horstretch>
-           <verstretch>20</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="baseSize">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
          <property name="text">
-          <string>Dodaj Zahtev</string>
+          <string>Dodaj zahtev</string>
          </property>
         </widget>
        </item>
       </layout>
      </widget>
     </item>
-    <item row="1" column="1">
+    <item>
      <widget class="QGroupBox" name="groupBox_4">
       <property name="title">
        <string>Magacioneri</string>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
-       <item>
-        <widget class="QPushButton" name="btnpriprema">
-         <property name="text">
-          <string>Priprema za Transport</string>
-         </property>
-        </widget>
-       </item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QPushButton" name="btnRaspodeli">
          <property name="text">
@@ -98,26 +91,17 @@
          </property>
         </widget>
        </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="1" column="2" colspan="2">
-     <widget class="QGroupBox" name="groupBox_6">
-      <property name="title">
-       <string>Sekretar</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_5">
        <item>
-        <widget class="QPushButton" name="btnTransport">
+        <widget class="QPushButton" name="btnpriprema">
          <property name="text">
-          <string>Transport</string>
+          <string>Priprema za Transport</string>
          </property>
         </widget>
        </item>
       </layout>
      </widget>
     </item>
-    <item row="2" column="0">
+    <item>
      <widget class="QGroupBox" name="groupBox_2">
       <property name="title">
        <string>Rukovodioci</string>
@@ -133,54 +117,16 @@
       </layout>
      </widget>
     </item>
-    <item row="2" column="1" colspan="2">
-     <widget class="QGroupBox" name="groupBox_5">
-      <property name="title">
-       <string>Menadžeri</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_6">
-       <item>
-        <widget class="QPushButton" name="btnIzvestaj">
-         <property name="text">
-          <string>Izveštaj</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btnDobavljaci">
-         <property name="text">
-          <string>Dobavljači</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton">
-         <property name="text">
-          <string>Finansijska odluka</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="2" column="3">
-     <widget class="QPushButton" name="btnPretrazivanje">
-      <property name="text">
-       <string>Pretraživanje
-sredstava</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0" colspan="2">
+    <item>
      <widget class="QGroupBox" name="groupBox_3">
       <property name="title">
        <string>Referenti</string>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QPushButton" name="btnSlanjeZahteva">
+        <widget class="QPushButton" name="btnSmanjenje">
          <property name="text">
-          <string>Slanje zahteva</string>
+          <string>Smanjenje zahteva</string>
          </property>
         </widget>
        </item>
@@ -192,13 +138,66 @@ sredstava</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="btnSmanjenje">
+        <widget class="QPushButton" name="btnSlanjeZahteva">
          <property name="text">
-          <string>Smanjenje zahteva</string>
+          <string>Slanje zahteva</string>
          </property>
         </widget>
        </item>
       </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="title">
+       <string>Menadžeri</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Finansijska odluka</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnDobavljaci">
+         <property name="text">
+          <string>Dobavljači</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnIzvestaj">
+         <property name="text">
+          <string>Izveštaj</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="title">
+       <string>Sekretar</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QPushButton" name="btnTransport">
+         <property name="text">
+          <string>Transport</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="title">
+       <string>Admin</string>
+      </property>
      </widget>
     </item>
    </layout>
@@ -208,7 +207,7 @@ sredstava</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>355</width>
+     <width>468</width>
      <height>21</height>
     </rect>
    </property>
