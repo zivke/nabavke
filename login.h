@@ -21,6 +21,7 @@ private slots:
     void closeEvent(QCloseEvent *event);
 private:
     Ui::Login *ui;
+    bool _login;
     QWidget *_parent;
 };
 
