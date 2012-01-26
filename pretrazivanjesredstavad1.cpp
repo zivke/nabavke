@@ -40,6 +40,7 @@ void PretrazivanjeSredstavaD1::setModelSredstva()
 	modelSredstva->setQuery("select -1 as A, 'Svi' as B union select * from artikal;");
 	view->setModel(modelSredstva);
 	view->setModelColumn(1);
+	view->setCurrentIndex(view->findText("Svi"));
 }
 
 void PretrazivanjeSredstavaD1::setModelGodina()
@@ -80,6 +81,7 @@ void PretrazivanjeSredstavaD1::setModelOrgJedinica()
 		modelOrgJedinica->setQuery("select -1, 'Sve', -1, -1 union select * from ogranak;");
 		view->setModel(modelOrgJedinica);
 		view->setModelColumn(1);
+		view->setCurrentIndex(view->findText("Sve"));
 	}
 }
 
@@ -90,6 +92,7 @@ void PretrazivanjeSredstavaD1::setModelDobavljac()
 	modelDobavljac->setQuery("select -1, 'Svi', -1, -1 union select * from dobavljac;");
 	view->setModel(modelDobavljac);
 	view->setModelColumn(1);
+	view->setCurrentIndex(view->findText("Svi"));
 }
 
 void PretrazivanjeSredstavaD1::setModelStatusSredstva()
@@ -127,6 +130,7 @@ void PretrazivanjeSredstavaD1::setModelZaposleni()
 		modelZaposleni->setQuery("select -1, 'Svi' union select id, ime || ' ' || prezime from nalog where tip = 'zaposleni';");
 		view->setModel(modelZaposleni);
 		view->setModelColumn(1);
+		view->setCurrentIndex(view->findText("Svi"));
 	}
 }
 
