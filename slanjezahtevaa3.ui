@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>SlanjeZahtevaA3</class>
  <widget class="QDialog" name="SlanjeZahtevaA3">
@@ -95,7 +95,6 @@
    </item>
   </layout>
   <zorder>tvStavke</zorder>
-  <zorder>verticalSpacer</zorder>
  </widget>
  <resources/>
  <connections/>
