@@ -28,16 +28,15 @@ void deaktivacijanalogae2::setModelKorisnici()
     QString str;
     QTreeView *view = ui->treeView;
     modelKorisnici = new QSqlQueryModel();
-    modelKorisnici->setQuery("select nalog.id, ime, prezime, user, pass, nalog.tip, ogranak.naziv from nalog join ogranak on nalog.id_ogranka = ogranak.id_ogranka");
+    modelKorisnici->setQuery("select nalog.id, ime, prezime, user, nalog.tip, ogranak.naziv from nalog join ogranak on nalog.id_ogranka = ogranak.id_ogranka");
 
-    modelKorisnici->setHeaderData(0, Qt::Horizontal, "Id");
     modelKorisnici->setHeaderData(1, Qt::Horizontal, "Ime");
     modelKorisnici->setHeaderData(2, Qt::Horizontal, "Prezime");
     modelKorisnici->setHeaderData(3, Qt::Horizontal, "Username");
-    modelKorisnici->setHeaderData(4, Qt::Horizontal, "Password");
-    modelKorisnici->setHeaderData(5, Qt::Horizontal, "Tip");
-    modelKorisnici->setHeaderData(6, Qt::Horizontal, "Ogranak");
+    modelKorisnici->setHeaderData(4, Qt::Horizontal, "Tip");
+    modelKorisnici->setHeaderData(5, Qt::Horizontal, "Ogranak");
     view->setModel(modelKorisnici);
+    view->setColumnHidden(0, true);
     view->setSortingEnabled(true);
 
     //povezujemo odabrani red sa unosom ispod treeview-a

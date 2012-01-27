@@ -201,6 +201,6 @@ void MainWindow::on_pushButton_5_clicked()
 
 void MainWindow::on_pushButton_6_clicked()
 {
-    DodajArtikal *da = new DodajArtikal();
+    DodajArtikal *da = new DodajArtikal(this);
     da->show();
 }
