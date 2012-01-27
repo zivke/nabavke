@@ -155,9 +155,9 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QPushButton" name="btnSmanjenje">
+        <widget class="QPushButton" name="btnSlanjeZahteva">
          <property name="text">
-          <string>Smanjenje zahteva</string>
+          <string>Slanje zahteva</string>
          </property>
         </widget>
        </item>
@@ -169,16 +169,16 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="btnSmanjenje">
          <property name="text">
-          <string>Slanje narudzbenice</string>
+          <string>Smanjenje zahteva</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="btnSlanjeZahteva">
+        <widget class="QPushButton" name="pushButton_4">
          <property name="text">
-          <string>Slanje zahteva</string>
+          <string>Slanje narudzbenice</string>
          </property>
         </widget>
        </item>

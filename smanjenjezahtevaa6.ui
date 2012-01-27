@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Smanjenje zahteva</string>
+   <string>(PROTOTIP) Smanjenje zahteva</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -185,12 +185,8 @@
     </layout>
    </item>
   </layout>
-  <zorder>layoutWidget</zorder>
   <zorder>groupBox</zorder>
-  <zorder>layoutWidget_2</zorder>
   <zorder>treeView</zorder>
-  <zorder>groupBox_3</zorder>
-  <zorder>horizontalSpacer_2</zorder>
  </widget>
  <resources/>
  <connections/>
