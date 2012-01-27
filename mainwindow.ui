@@ -24,9 +24,9 @@
    </size>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
       <item>
        <layout class="QFormLayout" name="formLayout">
         <item row="0" column="0">
@@ -63,12 +63,33 @@
        </layout>
       </item>
       <item>
-       <widget class="QPushButton" name="btnPretrazivanje">
-        <property name="text">
-         <string>Pretraživanje
-sredstava</string>
-        </property>
-       </widget>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QPushButton" name="pushButton_6">
+            <property name="text">
+             <string>Artikli</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnDobavljaci">
+            <property name="text">
+             <string>Dobavljači</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnPretrazivanje">
+          <property name="text">
+           <string>Pretraživanje sredstava</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
@@ -174,13 +195,6 @@ sredstava</string>
         <widget class="QPushButton" name="pushButton">
          <property name="text">
           <string>Finansijska odluka</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btnDobavljaci">
-         <property name="text">
-          <string>Dobavljači</string>
          </property>
         </widget>
        </item>

@@ -28,7 +28,8 @@ SOURCES += main.cpp\
     kreiranjenalogae1.cpp \
     slanjenarudzbeniceb1.cpp \
     prijemsredstavab2.cpp \
-    deaktivacijanalogae2.cpp
+    deaktivacijanalogae2.cpp \
+    dodajartikal.cpp
 
 HEADERS  += mainwindow.h \
     spisakzahtevaa1.h \
@@ -48,7 +49,8 @@ HEADERS  += mainwindow.h \
     kreiranjenalogae1.h \
     slanjenarudzbeniceb1.h \
     prijemsredstavab2.h \
-    deaktivacijanalogae2.h
+    deaktivacijanalogae2.h \
+    dodajartikal.h
 
 FORMS    += mainwindow.ui \
     spisakzahtevaa1.ui \
@@ -67,10 +69,14 @@ FORMS    += mainwindow.ui \
     kreiranjenalogae1.ui \
     slanjenarudzbeniceb1.ui \
     prijemsredstavab2.ui \
-    deaktivacijanalogae2.ui
+    deaktivacijanalogae2.ui \
+    dodajartikal.ui
 
 RESOURCES += \
     res.qrc
+
+
+
 
 
 
