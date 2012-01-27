@@ -144,7 +144,7 @@ void PretrazivanjeSredstavaD1::on_btnPretrazi_clicked()
 			         join spisak sp on sp.id_spiska = st.id_spiska \
 			         join nalog n on sp.id_naloga = n.id \
 			         join ogranak o on n.id_ogranka = o.id_ogranka \
-			         join dobavljac d on st.id_dobavljaca = d.id_dobavljaca where 1=1";
+			         left outer join dobavljac d on st.id_dobavljaca = d.id_dobavljaca where 1=1";
 
 	if(ui->cbSredstva->currentText().compare("Svi"))
 		query +=" and id_stavke = " + modelSredstva->data(modelSredstva->index(ui->cbSredstva->currentIndex(),0)).toString();
