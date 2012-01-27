@@ -55,8 +55,6 @@ void MainWindow::inicijalizacija(QString ime, int id)
 
     ui->lbId->setText(str);
 
-/************* Iskljucivanje dugmica *****************************
-
     QSqlQuery query;
 	query.prepare( "SELECT tip FROM nalog WHERE id = ?");
 	query.bindValue(0, _userId);
@@ -73,6 +71,8 @@ void MainWindow::inicijalizacija(QString ime, int id)
     	ui->gbReferenti->setEnabled(false);
     	ui->gbRukovodioci->setEnabled(false);
     	ui->gbSekretari->setEnabled(false);
+    	ui->btnArtikli->setEnabled(false);
+    	ui->btnDobavljaci->setEnabled(false);
     }
 	else if(!_tipNaloga.compare("rukovodilac"))
 	{
@@ -106,7 +106,16 @@ void MainWindow::inicijalizacija(QString ime, int id)
 		ui->gbReferenti->setEnabled(false);
 		ui->gbRukovodioci->setEnabled(false);
 	}
-*********************************************************/
+	else if(!_tipNaloga.compare("magacioner"))
+    {
+    	ui->gbAdministratori->setEnabled(false);
+    	ui->gbMenadzeri->setEnabled(false);
+    	ui->gbReferenti->setEnabled(false);
+    	ui->gbRukovodioci->setEnabled(false);
+    	ui->gbSekretari->setEnabled(false);
+    	ui->btnArtikli->setEnabled(false);
+    	ui->btnDobavljaci->setEnabled(false);
+    }
 }
 
 void MainWindow::on_btnOdobravanje_clicked()
@@ -199,7 +208,7 @@ void MainWindow::on_pushButton_5_clicked()
     ps->show();
 }
 
-void MainWindow::on_pushButton_6_clicked()
+void MainWindow::on_btnArtikli_clicked()
 {
     DodajArtikal *da = new DodajArtikal(this);
     da->show();
