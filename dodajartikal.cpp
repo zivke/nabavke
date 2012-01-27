@@ -6,7 +6,6 @@ DodajArtikal::DodajArtikal(QWidget *parent) :
     ui(new Ui::DodajArtikal)
 {
     ui->setupUi(this);
-    ui->setupUi(this);
     QSqlQueryModel *model = new QSqlQueryModel();
     QTreeView *view = ui->tvArtikli;
     model->setQuery("SELECT ''");
