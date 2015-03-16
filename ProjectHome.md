@@ -1,0 +1,1 @@
+Implementacija projekta za predmet Informacioni sistemi.
